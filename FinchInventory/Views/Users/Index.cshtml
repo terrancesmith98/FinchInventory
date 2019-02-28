@@ -1,0 +1,94 @@
+﻿@model IEnumerable<FinchInventory.Models.User>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            <a href="~/Users/Create" class="btn btn-success spinner-button" title="Add New"><i class="fas fa-plus mx-2"></i>Add New</a>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h1><i class="fas fa-users mx-2"></i>Users</h1>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped" id="users-table">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email Address</th>
+                                <th>User Roles</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FirstName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LastName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.UserName)
+                                    </td>
+                                    @{
+                                        var userRoles = item.UserRoles.Select(u => u.RoleID).ToArray();
+                                        var rolesArray = string.Join(", ", userRoles);
+                                    }
+                                    <td>
+                                        @rolesArray
+                                    </td>
+                                    <td class="pull-right">
+                                        <a href="~/Users/Edit/@item.ID" class="btn btn-warning " title="Edit"><i class="fas fa-pencil-alt mx-2"></i></a>
+                                        <a href="~/Users/Details/@item.ID" class="btn btn-info " title="Details"><i class="fas fa-info-circle mx-2"></i></a>
+                                        <a href="~/Users/Delete/@item.ID" class="btn btn-danger " title="Delete"><i class="fas fa-trash mx-2"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+
+
+
+    @section Scripts
+{
+        <script>
+        $(document).ready(function(){
+            'use strict';
+            $('#users-table').dataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'excelHtml5',
+                        orientation: 'landscape',
+                        text: '<i class="fas fa-file-excel fa-2x"></i>',
+                        titleAttr: 'Export To Excel',
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        text: '<i class="fas fa-file-pdf fa-2x"></i>',
+                        titleAttr: 'Export To PDF',
+                    },
+                ]
+            }
+
+            );
+        });
+        </script>
+    }

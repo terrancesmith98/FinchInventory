@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finch -- Inventory</title>
+    @*@Styles.Render("~/Content/css")*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="spinner" style="display:none">
+        <div class="center-div">
+            <div class="inner-div">
+                <div class="loader">
+                    <span><i class="fas fa-spinner"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <div id="logo">
+                <img src="~/Content/images/Finch.png" />
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link spinner-button" href="~/" id="home-link">Home <span class="sr-only">(current)</span></a>
+                </li>
+                @{
+                if (ViewBag.UserRoles != null)
+                {
+                if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(4))
+                {
+                <li class="nav-item">
+                    <a class="nav-link spinner-button" href="~/Users/Index" id="users-link">Users</a>
+                </li>
+                }
+                if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(4))
+                {
+                <li class="nav-item">
+                    <a class="nav-link spinner-button" href="~/Goals/Index" id="goals-link">Goals</a>
+                </li>
+                }
+                }
+
+                }
+
+            </ul>
+
+        </div>
+        <div id="welcome-message" class="px-3">
+            @{
+            if (ViewBag.CurrUser != null)
+            {
+            <h3>Welcome, @ViewBag.CurrUser.FirstName</h3>
+
+            }
+            }
+        </div>
+    </nav>
+    <div class="container body-content my-5">
+        @RenderBody()
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            'use strict';
+            $('.spinner').css('display', 'none');
+            $('.datepicker').datepicker();
+
+            if (window.location.href.indexOf("Users") > -1) {
+                $('#users-link').addClass('active');
+                $('#users-link').siblings().removeClass('active');
+            }
+
+            if (window.location.href.indexOf("Goals") > -1) {
+                $('#goals-link').addClass('active');
+                $('#goals-link').siblings().removeClass('active');
+            }
+
+            if (window.location.href.indexOf("Home") > -1) {
+                $('#home-link').addClass('active');
+                $('#home-link').siblings().removeClass('active');
+            } else if (window.location.pathname == '/') {
+                $('#home-link').addClass('active');
+                $('#home-link').siblings().removeClass('active');
+            }
+
+            $('.spinner-button').click(function () {
+                $('.spinner').css('display', 'block');
+            });
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

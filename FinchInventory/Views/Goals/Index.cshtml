@@ -1,0 +1,87 @@
+﻿@model IEnumerable<FinchInventory.Models.Goal>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h2>Clothing/Roll Age Goals</h2>
+                </div>
+                <div class="card-body">
+                    <table class="table" id="goals-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Paper Machine
+                                </th>
+                                <th>
+                                    Position
+                                </th>
+                                <th>
+                                    Goal
+                                </th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Machine.Machine1)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Position.Position1)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Goal1)
+                                    </td>
+                                    <td>
+                                        <a href="~/Goals/Edit/@item.ID" class="btn btn-warning spinner-button" title="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            'use strict';
+            $('#goals-table').dataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'excelHtml5',
+                        orientation: 'landscape',
+                        text: '<i class="fas fa-file-excel fa-2x"></i>',
+                        titleAttr: 'Export To Excel',
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        text: '<i class="fas fa-file-pdf fa-2x"></i>',
+                        titleAttr: 'Export To PDF',
+                    },
+                ]
+            }
+
+            );
+        });
+    </script>
+}
+
+

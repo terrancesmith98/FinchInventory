@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinchInventory", "FinchInventory\FinchInventory.csproj", "{AF220498-78D4-47EC-8159-651F19AAD6A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLoader", "DataLoader\DataLoader.csproj", "{A1AC94A6-2376-4DCC-A32E-6F7CE7D2C106}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF220498-78D4-47EC-8159-651F19AAD6A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF220498-78D4-47EC-8159-651F19AAD6A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF220498-78D4-47EC-8159-651F19AAD6A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF220498-78D4-47EC-8159-651F19AAD6A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1AC94A6-2376-4DCC-A32E-6F7CE7D2C106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1AC94A6-2376-4DCC-A32E-6F7CE7D2C106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1AC94A6-2376-4DCC-A32E-6F7CE7D2C106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1AC94A6-2376-4DCC-A32E-6F7CE7D2C106}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46FAD559-776F-466B-B9CB-459C3D474E45}
+	EndGlobalSection
+EndGlobal

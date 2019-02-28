@@ -1,0 +1,335 @@
+﻿@model FinchInventory.Models.Clothing
+@using FinchInventory.Models
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header bg-success">
+                    <h4>Receive Item into Inventory</h4>
+                </div>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="card-body">
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.PM_Number, "Machine Number", htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-4">
+                                        <select id="PM_Number" , name="PM_Number" class="form-control">
+                                            @foreach (var machine in ViewBag.Machines)
+                                            {
+                                                <option value="@machine.ID">@machine.Machine1</option>
+                                            }
+
+                                        </select>
+                                        @Html.ValidationMessageFor(model => model.PM_Number, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.RollTypeID, "Item Type", htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-4">
+                                        @Html.DropDownList("RollTypeID", null, htmlAttributes: new { @class = "form-control", @id = "rollTypeID" })
+                                        @Html.ValidationMessageFor(model => model.RollTypeID, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.PositionID, "Position", htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-4">
+                                        <select id="PositionID" , name="PositionID" class="form-control">
+                                            <option disabled value="na">-- Select Position --</option>
+                                        </select>
+                                        @Html.ValidationMessageFor(model => model.PositionID, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.Manufacturer, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-4">
+                                        <select id="manufacturer-select" class="form-control" name="ManufacturerID" required>
+                                            <option value="" disabled selected>-- Select Manufacturer --</option>
+                                            <option value="0">** Add New **</option>
+                                            @using (FinchDbContext db = new FinchDbContext())
+                                            {
+                                                foreach (FinchInventory.Models.Manufacturer manufacturer in db.Manufacturers.ToList())
+                                                {
+                                                    if (manufacturer.Name != "None")
+                                                    {
+                                                        <option value="@manufacturer.ID">@manufacturer.Name</option>
+                                                    }
+                                                }
+                                            }
+                                        </select>
+                                        <input type="text" class="form-control my-2 p-1" name="newManufacturer" id="newManufacturer" value="" placeholder="Enter new manufacturer name" hidden />
+                                        @Html.ValidationMessageFor(model => model.Manufacturer, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.TypeID, "Type", htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-4">
+                                        <select id="type-select" name="TypeID" class="form-control" required>
+                                            <option value="" disabled selected>-- Select Type --</option>
+                                            <option value="0">** Add New **</option>
+                                            @using (FinchDbContext db = new FinchDbContext())
+                                            {
+                                                foreach (FinchInventory.Models.Type type in db.Types.ToList())
+                                                {
+                                                    if (type.Type1 != "None")
+                                                    {
+                                                        <option value="@type.ID">@type.Type1</option>
+                                                    }
+
+                                                }
+                                            }
+                                        </select>
+                                        <input type="text" class="my-2 p-1 form-control" name="newType" id="newType" value="" placeholder="Enter new type" hidden />
+                                        @Html.ValidationMessageFor(model => model.TypeID, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.Serial_Number, "Serial Number", htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-4">
+                                        @Html.EditorFor(model => model.Serial_Number, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.Serial_Number, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.Date_Received, "Date Received", htmlAttributes: new { @class = "control-label col-md-2 text-right", @id = "date-received" })
+                                    <div class="col-md-4">
+                                        @Html.EditorFor(model => model.Date_Received, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                        @Html.ValidationMessageFor(model => model.Date_Received, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.LocationID, "Location", htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-4">
+                                        <select id="location-select" name="LocationID" class="form-control" required>
+                                            <option value="" disabled selected>-- Select Location --</option>
+                                            <option value="0">** Add New **</option>
+                                            @using (FinchDbContext db = new FinchDbContext())
+                                            {
+                                                foreach (FinchInventory.Models.Location location in db.Locations.ToList())
+                                                {
+                                                    if (location.Location1 != "None")
+                                                    {
+                                                        <option value="@location.ID">@location.Location1</option>
+                                                    }
+
+                                                }
+                                            }
+                                        </select>
+                                        <input type="text" class="my-2 p-1 form-control" name="newLocation" id="newLocation" value="" placeholder="Enter new location" hidden />
+                                        @Html.ValidationMessageFor(model => model.LocationID, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.Dimensions, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Dimensions, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Dimensions, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.RollWeight, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.RollWeight, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.RollWeight, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.MinDia, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.MinDia, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.MinDia, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.Crown, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Crown, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Crown, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.CoverMaterial, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.CoverMaterial, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.CoverMaterial, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.HoleGroovePattern, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.HoleGroovePattern, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.HoleGroovePattern, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.SpecifiedHardness, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.SpecifiedHardness, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.SpecifiedHardness, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.SpecifiedRa, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.SpecifiedRa, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.SpecifiedRa, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.CoverDate, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.CoverDate, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.CoverDate, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    @Html.LabelFor(model => model.Comments, htmlAttributes: new { @class = "control-label col-md-2 text-right" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Comments, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Comments, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success spinner-button" title="Save"><i class="fas fa-save mx-2"></i>Save</button>
+                        <a href="@Url.Action("Index","Home")" class="btn btn-primary spinner-button" title="Cancel"><i class="fas fa-arrow-left mx-2"></i>Cancel</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+            'use strict';
+            $('#Date_Received').datepicker('setDate', new Date());
+
+            $('#type-select').change(function () {
+                var newType = $(this).val();
+
+                if (newType == "0") {
+                    $('#newType').removeAttr('hidden');
+                } else {
+                    $('#newType').attr('hidden', true);
+                }
+
+            });
+
+            $('#manufacturer-select').change(function () {
+                var newMan = $(this).val();
+
+                if (newMan == "0") {
+                    $('#newManufacturer').removeAttr('hidden');
+                } else {
+                    $('#newManufacturer').attr('hidden', true);
+                }
+            });
+
+            $('#location-select').change(function () {
+                var newLoc = $(this).val();
+
+                if (newLoc == "0") {
+                    $('#newLocation').removeAttr('hidden');
+                } else {
+                    $('#newLocation').attr('hidden', true);
+                }
+            });
+
+            var url = "@Url.Action("LoadPositions", "Clothing")";
+                var options = "";
+                $.getJSON(url, { "type": "Roll" }, function (data) {
+                    $.each(data, function (a, b) {
+                        options += "<option value='" + b.Value + "'>" + b.Text + "</option>";
+                    });
+                    $('#PositionID').html(options);
+                });
+
+            $('#rollTypeID').change(function () {
+                var type = $('#rollTypeID option:selected').text();
+                var url = "@Url.Action("LoadPositions", "Clothing")";
+                var options = "";
+                $.getJSON(url, { "type": type }, function (data) {
+                    $.each(data, function (a, b) {
+                        options += "<option value='" + b.Value + "'>" + b.Text + "</option>";
+                    });
+                    $('#PositionID').html(options);
+                });
+            });
+        });
+    </script>
+}

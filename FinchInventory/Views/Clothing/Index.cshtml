@@ -1,0 +1,95 @@
+﻿@model IEnumerable<FinchInventory.Models.Clothing>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Location.Location1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position.Position1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status.Status1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type.Type1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PM_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Serial_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Received)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Placed_On_Mac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Removed_From_Mac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location.Location1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position.Position1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status.Status1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type.Type1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PM_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serial_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_Received)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_Placed_On_Mac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_Removed_From_Mac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comments)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

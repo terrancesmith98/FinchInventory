@@ -1,0 +1,103 @@
+﻿@model FinchInventory.Models.Clothing
+
+@using FinchInventory.Models
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h2>Replace: Serial#@ViewBag.Existing.Serial_Number - @ViewBag.Existing.Type.Type1 - PM# @ViewBag.Existing.PM_Number - @ViewBag.Existing.Position.Position1 Position</h2>
+                </div>
+                @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "replaceForm" }))
+                {
+                    <div class="card-body">
+
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@Model.ID" />
+                        @if (ViewBag.AvailableRolls.Count > 0)
+                        {
+                            <div class="form-row">
+                                <div class="form-group col-lg-4">
+                                    @Html.LabelFor(model => model.ID, "Replace This Item With:", htmlAttributes: new { @class = "control-label" })
+                                    <div>
+                                        <select id="replacementId" name="replacementId" class="form-control">
+                                            @{
+                                                using (var db = new FinchDbContext())
+                                                {
+                                                    foreach (Clothing item in @ViewBag.AvailableRolls)
+                                                    {
+                                                        <option value="@item.ID">@item.Serial_Number - @item.Type.Type1 - PM#@item.PM_Number - Pos-@item.Position.Position1</option>
+                                                    }
+                                                }
+                                            }
+
+
+                                        </select>
+                                        @Html.ValidationMessageFor(model => model.PM_Number, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="dDateReplaced" class="control-label">Date Replaced</label>
+                                    <input type="text" name="dateReplaced" class="form-control datepicker" value="" />
+                                </div>
+                                <div class="col-lg-4">
+                                    <label for="comments" class="control-label">Comments</label>
+                                    <input type="text" name="comments" class="form-control" value="" />
+                                </div>
+                            </div>
+
+                        }
+                        else
+                        {
+                            <h4 class="text-danger">No available replacements in inventory.</h4>
+                        }
+
+
+                    </div>
+                    <div class="card-footer">
+                        <a href="@Url.Action("Index","Home")" class="btn btn-primary spinner-button" title="Cancel">Cancel</a>
+                        <button href="#" type="submit" id="complete-btn" class="btn btn-success spinner-button" title="Complete Replacement">Complete Replacement</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    @section Scripts
+{
+        <script>
+            $(document).ready(function () {
+                'use strict';
+                 var availables = '@ViewBag.AvailableRolls.Count';
+                console.log(availables);
+                if (availables < 1) {
+                    $('#complete-btn').prop('disabled', true);
+                }
+
+                $('#replaceForm').submit(function (e) {
+                    e.preventDefault();
+
+                    var id = '@Model.ID';
+                    var url = '@Url.Action("Replace", "Clothing")';
+                    var form = $('#replaceForm').serialize();
+                    $.ajax({
+                        url: url,
+                        type: "POST",
+                        data: form,
+                        success: function (data) {
+
+                            window.location.href = data.redirecturl; // your action should return an object having [redirecturl] property
+
+                        },
+                        error: function (httpRequest, textStatus, errorThrown) {  // detailed error messsage
+                            alert("Error: " + textStatus + " " + errorThrown + " " + httpRequest);
+                        }
+                    })
+                });
+            });
+        </script>
+    }

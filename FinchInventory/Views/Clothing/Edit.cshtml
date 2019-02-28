@@ -1,0 +1,335 @@
+﻿@model FinchInventory.Models.Clothing
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card card-warning mt-5">
+            <div class="card-header">
+                <h2>Edit @Model.ID</h2>
+            </div>
+            @using (Html.BeginForm())
+            {
+                <div class="card-body">
+
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.ID)
+
+
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.PM_Number, "PM Number", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    <select id="PM_Number" , name="PM_Number">
+                                        @foreach (var machine in ViewBag.Machines)
+                                        {
+                                            <option value="@machine.ID">@machine.Machine1</option>
+                                        }
+
+                                    </select>
+                                    @Html.ValidationMessageFor(model => model.PM_Number, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.RollTypeID, "Roll Type", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.DropDownList("RollTypeID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.RollTypeID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.PositionID, "Position", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.DropDownList("PositionID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.PositionID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.Manufacturer, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Manufacturer, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Manufacturer, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.TypeID, "Type", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.DropDownList("TypeID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.TypeID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.Serial_Number, "Serial Number", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Serial_Number, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Serial_Number, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.Date_Received, "Received", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Date_Received, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.Date_Received, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.Date_Placed_On_Mac, "Placed on Machine", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Date_Placed_On_Mac, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.Date_Placed_On_Mac, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.Date_Removed_From_Mac, "Removed from Machine", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Date_Removed_From_Mac, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.Date_Removed_From_Mac, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.StatusID, "Status", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.DropDownList("StatusID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.StatusID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.LocationID, "Location", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.DropDownList("LocationID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.LocationID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.Dimensions, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Dimensions, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Dimensions, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.RollWeight, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.RollWeight, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.RollWeight, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.CurrentDia, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.CurrentDia, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.CurrentDia, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.MinDia, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.MinDia, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.MinDia, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.Crown, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Crown, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Crown, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.CoverMaterial, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.CoverMaterial, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.CoverMaterial, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.HoleGroovePattern, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.HoleGroovePattern, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.HoleGroovePattern, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.SpecifiedHardness, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.SpecifiedHardness, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.SpecifiedHardness, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.MeasuredHardness, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.MeasuredHardness, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.MeasuredHardness, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.SpecifiedRa, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.SpecifiedRa, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.SpecifiedRa, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.MeasuredRa, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.MeasuredRa, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.MeasuredRa, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.CoverDate, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.CoverDate, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.CoverDate, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="form-row">
+                                @Html.LabelFor(model => model.Comments, htmlAttributes: new { @class = "control-label col-md-3 text-right" })
+                                <div class="col-md-9">
+                                    @Html.EditorFor(model => model.Comments, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Comments, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <div>
+                        <button class="btn btn-success spinner-button" title="Save">Save Changes</button>
+                        <a href="~/Home/Index" class="btn btn-primary spinner-button" title="Back"><i class="fas fa-arrow-left mx-2"></i>Back to List</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        $(document).ready(function(){
+            'use strict';
+            $('#PM_Number').val('@Model.PM_Number');
+
+            $('#Date_Removed_From_Mac').on('changeDate', function (event) {
+                var value = $('#Date_Removed_From_Mac').val();
+                if (value != null) {
+                    $('#StatusID').val(3);
+                }
+            });
+        });
+    </script>
+}
+

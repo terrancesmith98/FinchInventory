@@ -1,0 +1,42 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+@using FinchInventory.Models()
+
+@{
+    /**/
+
+    ViewBag.Title = "Error";
+}
+
+<h1 class="text-danger">Error.</h1>
+
+@if (ViewBag.ErrorMessage == null)
+{
+    <h2 class="text-danger">An error occurred while processing your request.</h2>
+
+}
+else
+{
+    <h2 class="text-danger">@ViewBag.ErrorMessage</h2>
+    <p class="text-light">
+        @ViewBag.ErrorDetails
+    </p>
+    @foreach (Admin admin in ViewBag.Admins)
+    {
+        <p>@admin.FirstName @admin.LastName - @admin.UserName</p>
+
+    }
+
+
+
+
+}
+
+@section Scripts
+{
+    <script>
+            $(document).ready(function(){
+                'use strict';
+                console.log('@ViewBag.Admins');
+            });
+    </script>
+}

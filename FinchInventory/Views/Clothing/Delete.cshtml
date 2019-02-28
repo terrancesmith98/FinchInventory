@@ -1,0 +1,173 @@
+﻿@model FinchInventory.Models.Clothing
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card card-primary mt-5">
+            <div class="card-header bg-danger">
+                <h2>Delete</h2>
+                <h3>Are you sure you want to delete this?</h3>
+            </div>
+            <div class="card-body">
+                <dl class="dl-horizontal">
+                    @{
+                        var dateReceived = new DateTime();
+                        var datePlaced = new DateTime();
+                        var dateRemoved = new DateTime();
+                        if (Model.Date_Received != null)
+                        {
+                            dateReceived = (DateTime)Model.Date_Received;
+                        }
+                        if (Model.Date_Placed_On_Mac != null)
+                        {
+                            datePlaced = (DateTime)Model.Date_Placed_On_Mac;
+                        }
+                        if (Model.Date_Removed_From_Mac != null)
+                        {
+                            dateRemoved = (DateTime)Model.Date_Removed_From_Mac;
+                        }
+                    }
+
+                    <dt>
+                        Position
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Position.Position1)
+                    </dd>
+
+                    <dt>
+                        Status
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Status.Status1)
+                    </dd>
+                    @{
+                        if (Model.Status.ToString() == "Inventory")
+                        {
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Location.Location1)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Location.Location1)
+                            </dd>
+                        }
+                    }
+
+
+                    <dt>
+                        Type
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Type.Type1)
+                    </dd>
+
+                    <dt>
+                        PM Number
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.PM_Number)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Manufacturer)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Manufacturer)
+                    </dd>
+
+                    <dt>
+                        Serial Number
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Serial_Number)
+                    </dd>
+                    @{
+                        if (Model.Date_Received != null && Model.Date_Received != DateTime.Parse("1/1/0001"))
+                        {
+                            <dt>
+                                Date Received
+                            </dt>
+
+                            <dd>
+                                @dateReceived.ToShortDateString()
+                            </dd>
+                        }
+
+                        if (Model.Date_Placed_On_Mac != null && Model.Date_Placed_On_Mac != DateTime.Parse("1/1/0001"))
+                        {
+                            <dt>
+                                Placed on Machine
+                            </dt>
+
+                            <dd>
+                                @datePlaced.ToShortDateString()
+                            </dd>
+                        }
+
+                        if (Model.Date_Removed_From_Mac != null && Model.Date_Removed_From_Mac != DateTime.Parse("1/1/0001"))
+                        {
+                            <dt>
+                                Removed from Machine
+                            </dt>
+
+                            <dd>
+                                @dateRemoved.ToShortDateString()
+                            </dd>
+                        }
+                        var age = 0;
+                        if (Model.Age > 0)
+                        {
+                            age = (int)Model.Age;
+                        }
+                        else if (Model.StatusID == 2)
+                        {
+                            var diff = DateTime.Now - (DateTime)Model.Date_Placed_On_Mac;
+                            age = diff.Days;
+                        }
+                        else if (Model.StatusID == 3)
+                        {
+                            var diff = (DateTime)Model.Date_Removed_From_Mac - (DateTime)Model.Date_Placed_On_Mac;
+                            age = diff.Days;
+                        }
+                        <dt>Age</dt>
+                        <dd>@age</dd>
+                    }
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Comments)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Comments)
+                    </dd>
+
+                </dl>
+
+
+            </div>
+            <div class="card-footer">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <button type="submit" class="btn btn-danger spinner-button" title="Delete">Delete</button>
+                        <a href="~/Home/Index" class="btn btn-primary spinner-button" title="Back">Back To List</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+

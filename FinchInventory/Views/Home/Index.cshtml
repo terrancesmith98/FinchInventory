@@ -1,0 +1,189 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using FinchInventory.Models;
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-12 mt-2">
+                <div id="main-console" class="mt-2 rounded p-3 col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 main-console">
+                            <a href="~/Clothing/Create" class="btn btn-success mx-2 spinner-button" title="Receive Clothing/Roll"><i class="fas fa-plus mx-2"></i>Receive Item</a>
+                        </div>
+                        <div class="col-lg-9 main-console">
+                            <a href="#" id="audit-report-btn" class="btn btn-secondary btn-sm ml-5 mr-2 pull-right spinner-button" title="Generate Inventory Audit Report"><i class="fas fa-file-pdf mx-2"></i>Inventory Audit</a>
+                            <a href="#" id="weekly-pm-report-btn" class="btn btn-secondary btn-sm mx-2 pull-right spinner-button" title="Generate Weekly PM Report"><i class="fas fa-file-pdf mx-2"></i>Weekly PM Report</a>
+                            <a href="~/Reports/HistoricalToExcel" id="historical-to-excel" class="btn btn-secondary btn-sm mx-2 pull-right" title="Historical Data to Excel"><i class="fas fa-file-excel mx-2 text-success"></i>Historical to Excel</a>
+                            @if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(4))
+                            {
+                                <a href="~/Reports/InventoryToExcel" id="inventory-to-excel" class="btn btn-secondary btn-sm mx-2 pull-right" title="Full Database to Excel"><i class="fas fa-file-excel mx-2 text-success"></i>Full Database to Excel</a>
+                            }
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="card card-primary mt-3">
+            <div class="card-header">
+                <h2><i class="fas fa-clipboard-list mx-2"></i>Clothing/Roll Tracking</h2>
+            </div>
+            <div class="card-body">
+                <table id="inventory_table" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>PM#</th>
+                            <th>Position</th>
+                            <th>Manuf</th>
+                            <th>Ser#</th>
+                            <th>Received</th>
+                            <th>Placed</th>
+                            <th>Removed</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+
+                            foreach (Clothing item in ViewBag.Inventory)
+                            {
+                                var datePlaced = item.Date_Placed_On_Mac.HasValue ? item.Date_Placed_On_Mac.Value.ToString("MM/dd/yyyy") : "None";
+                                var dateRemoved = item.Date_Removed_From_Mac.HasValue ? item.Date_Removed_From_Mac.Value.ToString("MM/dd/yyyy") : "None";
+                                var dateReceived = item.Date_Received.HasValue ? item.Date_Received.Value.ToString("MM/dd/yyyy") : "None";
+
+                                var location = item.Location.Location1 ?? "None";
+                                var manufacturer = !string.IsNullOrEmpty(item.Manufacturer.Name) ? item.Manufacturer.Name : "None";
+                                var age = 0;
+                                if (item.Age > 0 && item.StatusID != 2)
+                                {
+                                    age = Convert.ToInt32(item.Age);
+                                }
+                                else if (item.StatusID == 2 && item.Date_Placed_On_Mac != null)
+                                {
+                                    var days = DateTime.Now - (DateTime)item.Date_Placed_On_Mac;
+                                    age = days.Days;
+                                }
+                                <tr>
+                                    <td>@item.PM_Number</td>
+                                    <td>@item.Position.Position1.ToUpper()</td>
+                                    <td>@manufacturer</td>
+                                    <td>@item.Serial_Number</td>
+                                    <td>@dateReceived</td>
+                                    <td>@datePlaced</td>
+                                    <td>@dateRemoved</td>
+                                    <td>@item.Type.Type1.ToUpper()</td>
+                                    <td>@item.Status.Status1.ToUpper()</td>
+                                    <td>@age</td>
+                                    <td class="text-right">
+                                        <div class="pull-right">
+
+                                            @if (item.StatusID != 1 && item.StatusID != 3)
+                                            {
+                                                if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(2) || ViewBag.UserRoles.Contains(4))
+                                                {
+                                                    <a href="@Url.Action("ReplaceForm", "Clothing", new { id = item.ID})" class="btn btn-success btn-sm replace-roll spinner-button" title="Replace Clothing/Roll"><i class="fas fa-exchange-alt mx-2"></i></a>
+                                                }
+
+                                            }
+                                            <a href="~/Clothing/Details/@item.ID" class="btn btn-info btn-sm spinner-button" title="Details"><i class="fas fa-info-circle"></i></a>
+                                            @if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(4))
+                                            {
+                                                <a href="~/Clothing/Edit/@item.ID" class="btn btn-warning btn-sm spinner-button" title="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                                <a href="~/Clothing/Delete/@item.ID" class="btn btn-danger btn-sm spinner-button" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                                            }
+
+
+                                        </div>
+
+
+                                    </td>
+
+                                </tr>
+                            }
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            'use strict';
+            var user = '@ViewBag.CurrUser';
+            var roles = '@ViewBag.UserRoles';
+
+            console.log(user);
+            $('#inventory_table').dataTable({
+                //dom: 'Bfrtip',
+                dom:
+                    "<'row'<'col-sm-3'l><'col-sm-6 text-center'B><'col-sm-3'f>>" +
+                    "<'row'<'col-sm-12'tr>>" +
+                    "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+                buttons: [
+                    {
+                        extend: 'excelHtml5',
+                        orientation: 'landscape',
+                        text: '<i class="fas fa-file-excel fa-2x"></i>',
+                        titleAttr: 'Export To Excel',
+                    },
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        text: '<i class="fas fa-file-pdf fa-2x"></i>',
+                        titleAttr: 'Export To PDF',
+                    }
+
+                ],
+                "columnDefs": [
+                    { "width": "1%", "targets": [0, 9] },
+                    { "width": "3%", "targets": [1, 2, 3, 4, 5, 6, 7, 8] },
+                    { "width": "15%", "targets": 10 }
+                ],
+                lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
+                iDisplayLength: 10
+            }
+
+            );
+
+            $('#audit-report-btn').click(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: '@Url.Content("~/Reports/CreateInventoryAuditReport")',
+                    method: "POST",
+                    success: function (response) {
+                        $('.spinner').css('display', 'none');
+                        window.open("Content/Reports/" + response);
+                    }
+                });
+            });
+
+            $('#weekly-pm-report-btn').click(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: '@Url.Content("~/Reports/CreateWeeklyPMReport")',
+                    method: "POST",
+                    success: function (response) {
+                        $('.spinner').css('display', 'none');
+                        window.open("Content/Reports/" + response);
+                    }
+                });
+            });
+        });
+
+    </script>
+}

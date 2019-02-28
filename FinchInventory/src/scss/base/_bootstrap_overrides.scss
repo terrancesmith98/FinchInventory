@@ -1,0 +1,32 @@
+﻿@import '../modules/_variables.scss';
+
+.btn {
+    border-color: #222;
+}
+
+
+.btn-info {
+    background-color: $info-color;
+
+    &:hover {
+        background: darken($info-color, 10%);
+    }
+}
+
+.btn-warning {
+    background: $warning-color;
+    color: white;
+
+    &:hover {
+        background: darken($warning-color, 10%);
+        color: white;
+    }
+}
+
+.bg-warning {
+    background-color: $warning-color;
+}
+
+.replace-roll {
+    padding: 3px 0;
+}

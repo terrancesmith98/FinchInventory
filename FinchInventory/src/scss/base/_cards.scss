@@ -1,0 +1,23 @@
+﻿@import '../modules/_variables.scss';
+
+.card {
+    box-shadow: 0 0 10px #ccc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card-primary {
+    .card-header {
+        background: $primary-color;
+        color: whitesmoke;
+        border-bottom: 3px solid #333 !important;
+        border-radius: 5px 5px 0 0;
+    }
+}
+
+.card-warning {
+    .card-header {
+        background: $warning-color;
+        color: whitesmoke;
+    }
+}

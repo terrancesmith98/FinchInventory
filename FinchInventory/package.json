@@ -1,0 +1,28 @@
+{
+  "name": "finch_inventory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terrancesmith98/finch-inventory.git"
+  },
+  "author": "Terrance Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/terrancesmith98/finch-inventory/issues"
+  },
+  "homepage": "https://github.com/terrancesmith98/finch-inventory#readme"
+}

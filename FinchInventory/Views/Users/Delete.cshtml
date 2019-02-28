@@ -1,0 +1,42 @@
+﻿@model FinchInventory.Models.User
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card card-primary mt-5">
+            <div class="card-header bg-danger">
+                <h3>Are you sure you want to delete @Model.FirstName @Model.LastName?</h3>
+            </div>
+            <div class="card-body">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.LastName)
+                    </dd>
+
+                </dl>
+            </div>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-danger spinner-button" title="Delete"><i class="fas fa-trash mx-2"></i>Delete</button>
+                    <a href="~/Users/Index" class="btn btn-primary spinner-button" title="Back to List"><i class="fas fa-arrow-left mx-2"></i>Back to List</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+

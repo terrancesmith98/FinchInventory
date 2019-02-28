@@ -1,0 +1,49 @@
+﻿@model FinchInventory.Models.User
+
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h4>User Details for @Model.FirstName @Model.LastName</h4>
+                </div>
+                <div class="card-body">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FirstName)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.FirstName)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.LastName)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.LastName)
+                        </dd>
+
+                        <dt>
+                            Email Address
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.UserName)
+                        </dd>
+
+                    </dl>
+                </div>
+                <div class="card-footer">
+                    <a href="~/Users/Edit/@Model.ID" class="btn btn-warning spinner-button" title="Edit"><i class="fas fa-pencil-alt mx-2"></i>Edit</a>
+                    <a href="~/Users/Index" class="btn btn-primary spinner-button" title="Back to List"><i class="fas fa-arrow-left mx-2"></i>Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
