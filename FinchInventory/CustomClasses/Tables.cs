@@ -23,13 +23,17 @@ namespace FinchInventory.CustomClasses
             posCol.Format.Alignment = ParagraphAlignment.Left;
             posCol.Format.Font.Size = 10;
 
-            Column typeCol = auditTable.AddColumn(Unit.FromCentimeter(8));
+            Column typeCol = auditTable.AddColumn(Unit.FromCentimeter(7));
             typeCol.Format.Alignment = ParagraphAlignment.Left;
-            typeCol.Format.Font.Size = 10;
+            typeCol.Format.Font.Size = 9.5;
 
             Column locCol = auditTable.AddColumn(Unit.FromCentimeter(3));
             locCol.Format.Alignment = ParagraphAlignment.Center;
             locCol.Format.Font.Size = 10;
+
+            Column recCol = auditTable.AddColumn(Unit.FromCentimeter(3));
+            recCol.Format.Alignment = ParagraphAlignment.Center;
+            recCol.Format.Font.Size = 10;
 
             //define headers row
             Row headers = auditTable.AddRow();
@@ -51,6 +55,11 @@ namespace FinchInventory.CustomClasses
             locHeader.Format.Font.Size = 10;
             locHeader.VerticalAlignment = VerticalAlignment.Center;
             locHeader.AddParagraph("Location");
+
+            Cell recHeader = headers.Cells[3];
+            recHeader.Format.Font.Size = 10;
+            recHeader.VerticalAlignment = VerticalAlignment.Center;
+            recHeader.AddParagraph("Date Received");
 
             //fill content cells
             var rowCounter = 1;
@@ -78,6 +87,18 @@ namespace FinchInventory.CustomClasses
                 cLoc.Format.Font.Size = 8.5;
                 cLoc.AddParagraph(clothing.Location.Location1);
                 cLoc.VerticalAlignment = VerticalAlignment.Center;
+
+                Cell cRec = r.Cells[3];
+                cRec.Format.Font.Size = 8.5;
+                var dateReceived = new DateTime();
+                if (clothing.Date_Received != null)
+                {
+                    dateReceived = (DateTime)clothing.Date_Received;
+                    cRec.AddParagraph($"{dateReceived.ToShortDateString()}");
+                    cRec.VerticalAlignment = VerticalAlignment.Center;
+                }
+                    
+
                 rowCounter++;
             }
 
