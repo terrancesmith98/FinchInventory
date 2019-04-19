@@ -3829,7 +3829,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell2ndPressTop4Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell2ndPressTop4Goal = row2ndPressTop.Cells[12];
             cell2ndPressTop4Goal.Format.Font.Size = 8;
@@ -3893,7 +3893,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell2ndPressBottom1Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell2ndPressBottom1Goal = row2ndPressBottom.Cells[3];
             cell2ndPressBottom1Goal.Format.Font.Size = 8;
@@ -3932,7 +3932,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell2ndPressBottom2Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell2ndPressBottom2Goal = row2ndPressBottom.Cells[6];
             cell2ndPressBottom2Goal.Format.Font.Size = 8;
@@ -3971,7 +3971,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell2ndPressBottom3Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell2ndPressBottom3Goal = row2ndPressBottom.Cells[9];
             cell2ndPressBottom3Goal.Format.Font.Size = 8;
@@ -4010,7 +4010,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell2ndPressBottom4Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell2ndPressBottom4Goal = row2ndPressBottom.Cells[12];
             cell2ndPressBottom4Goal.Format.Font.Size = 8;
@@ -4074,7 +4074,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell3rdPressTop1Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell3rdPressTop1Goal = row3rdPressTop.Cells[3];
             cell3rdPressTop1Goal.Format.Font.Size = 8;
@@ -4113,7 +4113,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell3rdPressTop2Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell3rdPressTop2Goal = row3rdPressTop.Cells[6];
             cell3rdPressTop2Goal.Format.Font.Size = 8;
@@ -4152,7 +4152,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell3rdPressTop3Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell3rdPressTop3Goal = row3rdPressTop.Cells[9];
             cell3rdPressTop3Goal.Format.Font.Size = 8;
@@ -4191,7 +4191,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell3rdPressTop4Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell3rdPressTop4Goal = row3rdPressTop.Cells[12];
             cell3rdPressTop4Goal.Format.Font.Size = 8;
@@ -4255,7 +4255,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell3rdPressBottom1Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell3rdPressBottom1Goal = row3rdPressBottom.Cells[3];
             cell3rdPressBottom1Goal.Format.Font.Size = 8;
@@ -4294,7 +4294,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell3rdPressBottom2Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell3rdPressBottom2Goal = row3rdPressBottom.Cells[6];
             cell3rdPressBottom2Goal.Format.Font.Size = 8;
@@ -4333,7 +4333,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell3rdPressBottom3Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell3rdPressBottom3Goal = row3rdPressBottom.Cells[9];
             cell3rdPressBottom3Goal.Format.Font.Size = 8;
@@ -4372,7 +4372,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cell3rdPressBottom4Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cell3rdPressBottom4Goal = row3rdPressBottom.Cells[12];
             cell3rdPressBottom4Goal.Format.Font.Size = 8;
@@ -4436,7 +4436,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellSmoothTop1Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellSmoothTop1Goal = rowSmoothTop.Cells[3];
             cellSmoothTop1Goal.Format.Font.Size = 8;
@@ -4475,7 +4475,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellSmoothTop2Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellSmoothTop2Goal = rowSmoothTop.Cells[6];
             cellSmoothTop2Goal.Format.Font.Size = 8;
@@ -4514,7 +4514,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellSmoothTop3Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellSmoothTop3Goal = rowSmoothTop.Cells[9];
             cellSmoothTop3Goal.Format.Font.Size = 8;
@@ -4553,7 +4553,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellSmoothTop4Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellSmoothTop4Goal = rowSmoothTop.Cells[12];
             cellSmoothTop4Goal.Format.Font.Size = 8;
@@ -4617,7 +4617,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellSmoothBottom1Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellSmoothBottom1Goal = rowSmoothBottom.Cells[3];
             cellSmoothBottom1Goal.Format.Font.Size = 8;
@@ -4656,7 +4656,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellSmoothBottom2Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellSmoothBottom2Goal = rowSmoothBottom.Cells[6];
             cellSmoothBottom2Goal.Format.Font.Size = 8;
@@ -4695,7 +4695,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellSmoothBottom3Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellSmoothBottom3Goal = rowSmoothBottom.Cells[9];
             cellSmoothBottom3Goal.Format.Font.Size = 8;
@@ -4734,7 +4734,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellSmoothBottom4Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellSmoothBottom4Goal = rowSmoothBottom.Cells[12];
             cellSmoothBottom4Goal.Format.Font.Size = 8;
@@ -4798,7 +4798,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellHardSizePress1Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellHardSizePress1Goal = rowHardSizePress.Cells[3];
             cellHardSizePress1Goal.Format.Font.Size = 8;
@@ -4837,7 +4837,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellHardSizePress2Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellHardSizePress2Goal = rowHardSizePress.Cells[6];
             cellHardSizePress2Goal.Format.Font.Size = 8;
@@ -4876,7 +4876,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellHardSizePress3Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellHardSizePress3Goal = rowHardSizePress.Cells[9];
             cellHardSizePress3Goal.Format.Font.Size = 8;
@@ -4915,7 +4915,7 @@ namespace FinchInventory.CustomClasses
                 else if (positionGoal - currentAge <= 35)
                     cellHardSizePress4Current.Shading.Color = Colors.Yellow;
             }
-            
+
 
             var cellHardSizePress4Goal = rowHardSizePress.Cells[12];
             cellHardSizePress4Goal.Format.Font.Size = 8;
@@ -4961,23 +4961,31 @@ namespace FinchInventory.CustomClasses
             var cellSoftSizePress1Past = rowSoftSizePress.Cells[1];
             cellSoftSizePress1Past.Format.Font.Size = 8;
             cellSoftSizePress1Past.VerticalAlignment = VerticalAlignment.Center;
-            cellSoftSizePress1Past.AddParagraph($"{GetPastAverage(1, 27)}");
+            pastAverage = GetPastAverage(1, 27);
+            if (pastAverage > 0)
+                cellSoftSizePress1Past.AddParagraph($"{pastAverage}");
 
             var cellSoftSizePress1Current = rowSoftSizePress.Cells[2];
             cellSoftSizePress1Current.Format.Font.Size = 8;
             cellSoftSizePress1Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingSoftSizePress1);
             positionGoal = GetPositionGoal(1, 27);
-            cellSoftSizePress1Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellSoftSizePress1Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellSoftSizePress1Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellSoftSizePress1Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellSoftSizePress1Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellSoftSizePress1Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellSoftSizePress1Goal = rowSoftSizePress.Cells[3];
             cellSoftSizePress1Goal.Format.Font.Size = 8;
             cellSoftSizePress1Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellSoftSizePress1Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellSoftSizePress1Goal.AddParagraph($"{positionGoal}");
 
             var cellSoftSizePress1Info = rowSoftSizePress2.Cells[1];
             cellSoftSizePress1Info.Format.Font.Size = 8;
@@ -4992,23 +5000,31 @@ namespace FinchInventory.CustomClasses
             var cellSoftSizePress2Past = rowSoftSizePress.Cells[4];
             cellSoftSizePress2Past.Format.Font.Size = 8;
             cellSoftSizePress2Past.VerticalAlignment = VerticalAlignment.Center;
-            cellSoftSizePress2Past.AddParagraph($"{GetPastAverage(2, 27)}");
+            pastAverage = GetPastAverage(2, 27);
+            if (pastAverage > 0)
+                cellSoftSizePress2Past.AddParagraph($"{pastAverage}");
 
             var cellSoftSizePress2Current = rowSoftSizePress.Cells[5];
             cellSoftSizePress2Current.Format.Font.Size = 8;
             cellSoftSizePress2Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingSoftSizePress2);
             positionGoal = GetPositionGoal(2, 27);
-            cellSoftSizePress2Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellSoftSizePress2Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellSoftSizePress2Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellSoftSizePress2Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellSoftSizePress2Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellSoftSizePress2Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellSoftSizePress2Goal = rowSoftSizePress.Cells[6];
             cellSoftSizePress2Goal.Format.Font.Size = 8;
             cellSoftSizePress2Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellSoftSizePress2Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellSoftSizePress2Goal.AddParagraph($"{positionGoal}");
 
             var cellSoftSizePress2Info = rowSoftSizePress2.Cells[4];
             cellSoftSizePress2Info.Format.Font.Size = 8;
@@ -5023,23 +5039,31 @@ namespace FinchInventory.CustomClasses
             var cellSoftSizePress3Past = rowSoftSizePress.Cells[7];
             cellSoftSizePress3Past.Format.Font.Size = 8;
             cellSoftSizePress3Past.VerticalAlignment = VerticalAlignment.Center;
-            cellSoftSizePress3Past.AddParagraph($"{GetPastAverage(3, 27)}");
+            pastAverage = GetPastAverage(3, 27);
+            if (pastAverage > 0)
+                cellSoftSizePress3Past.AddParagraph($"{pastAverage}");
 
             var cellSoftSizePress3Current = rowSoftSizePress.Cells[8];
             cellSoftSizePress3Current.Format.Font.Size = 8;
             cellSoftSizePress3Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingSoftSizePress3);
             positionGoal = GetPositionGoal(3, 27);
-            cellSoftSizePress3Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellSoftSizePress3Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellSoftSizePress3Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellSoftSizePress3Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellSoftSizePress3Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellSoftSizePress3Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellSoftSizePress3Goal = rowSoftSizePress.Cells[9];
             cellSoftSizePress3Goal.Format.Font.Size = 8;
             cellSoftSizePress3Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellSoftSizePress3Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellSoftSizePress3Goal.AddParagraph($"{positionGoal}");
 
             var cellSoftSizePress3Info = rowSoftSizePress2.Cells[7];
             cellSoftSizePress3Info.Format.Font.Size = 8;
@@ -5054,23 +5078,31 @@ namespace FinchInventory.CustomClasses
             var cellSoftSizePress4Past = rowSoftSizePress.Cells[10];
             cellSoftSizePress4Past.Format.Font.Size = 8;
             cellSoftSizePress4Past.VerticalAlignment = VerticalAlignment.Center;
-            cellSoftSizePress4Past.AddParagraph($"{GetPastAverage(4, 27)}");
+            pastAverage = GetPastAverage(4, 27);
+            if (pastAverage > 0)
+                cellSoftSizePress4Past.AddParagraph($"{pastAverage}");
 
             var cellSoftSizePress4Current = rowSoftSizePress.Cells[11];
             cellSoftSizePress4Current.Format.Font.Size = 8;
             cellSoftSizePress4Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingSoftSizePress4);
             positionGoal = GetPositionGoal(4, 27);
-            cellSoftSizePress4Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellSoftSizePress4Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellSoftSizePress4Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellSoftSizePress4Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellSoftSizePress4Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellSoftSizePress4Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellSoftSizePress4Goal = rowSoftSizePress.Cells[12];
             cellSoftSizePress4Goal.Format.Font.Size = 8;
             cellSoftSizePress4Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellSoftSizePress4Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellSoftSizePress4Goal.AddParagraph($"{positionGoal}");
 
             var cellSoftSizePress4Info = rowSoftSizePress2.Cells[10];
             cellSoftSizePress4Info.Format.Font.Size = 8;
@@ -5104,23 +5136,31 @@ namespace FinchInventory.CustomClasses
             var cellAquithermTop1Past = rowAquithermTop.Cells[1];
             cellAquithermTop1Past.Format.Font.Size = 8;
             cellAquithermTop1Past.VerticalAlignment = VerticalAlignment.Center;
-            cellAquithermTop1Past.AddParagraph($"{GetPastAverage(1, 28)}");
+            pastAverage = GetPastAverage(1, 28);
+            if (pastAverage > 0)
+                cellAquithermTop1Past.AddParagraph($"{pastAverage}");
 
             var cellAquithermTop1Current = rowAquithermTop.Cells[2];
             cellAquithermTop1Current.Format.Font.Size = 8;
             cellAquithermTop1Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingAquithermTop1);
             positionGoal = GetPositionGoal(1, 28);
-            cellAquithermTop1Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellAquithermTop1Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellAquithermTop1Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellAquithermTop1Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellAquithermTop1Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellAquithermTop1Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellAquithermTop1Goal = rowAquithermTop.Cells[3];
             cellAquithermTop1Goal.Format.Font.Size = 8;
             cellAquithermTop1Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellAquithermTop1Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellAquithermTop1Goal.AddParagraph($"{positionGoal}");
 
             var cellAquithermTop1Info = rowAquithermTop2.Cells[1];
             cellAquithermTop1Info.Format.Font.Size = 8;
@@ -5135,23 +5175,31 @@ namespace FinchInventory.CustomClasses
             var cellAquithermTop2Past = rowAquithermTop.Cells[4];
             cellAquithermTop2Past.Format.Font.Size = 8;
             cellAquithermTop2Past.VerticalAlignment = VerticalAlignment.Center;
-            cellAquithermTop2Past.AddParagraph($"{GetPastAverage(2, 28)}");
+            pastAverage = GetPastAverage(2, 28);
+            if (pastAverage > 0)
+                cellAquithermTop2Past.AddParagraph($"{pastAverage}");
 
             var cellAquithermTop2Current = rowAquithermTop.Cells[5];
             cellAquithermTop2Current.Format.Font.Size = 8;
             cellAquithermTop2Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingAquithermTop2);
             positionGoal = GetPositionGoal(2, 28);
-            cellAquithermTop2Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellAquithermTop2Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellAquithermTop2Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellAquithermTop2Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellAquithermTop2Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellAquithermTop2Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellAquithermTop2Goal = rowAquithermTop.Cells[6];
             cellAquithermTop2Goal.Format.Font.Size = 8;
             cellAquithermTop2Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellAquithermTop2Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellAquithermTop2Goal.AddParagraph($"{positionGoal}");
 
             var cellAquithermTop2Info = rowAquithermTop2.Cells[4];
             cellAquithermTop2Info.Format.Font.Size = 8;
@@ -5166,23 +5214,31 @@ namespace FinchInventory.CustomClasses
             var cellAquithermTop3Past = rowAquithermTop.Cells[7];
             cellAquithermTop3Past.Format.Font.Size = 8;
             cellAquithermTop3Past.VerticalAlignment = VerticalAlignment.Center;
-            cellAquithermTop3Past.AddParagraph($"{GetPastAverage(3, 28)}");
+            pastAverage = GetPastAverage(3, 28);
+            if (pastAverage > 0)
+                cellAquithermTop3Past.AddParagraph($"{pastAverage}");
 
             var cellAquithermTop3Current = rowAquithermTop.Cells[8];
             cellAquithermTop3Current.Format.Font.Size = 8;
             cellAquithermTop3Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingAquithermTop3);
             positionGoal = GetPositionGoal(3, 28);
-            cellAquithermTop3Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellAquithermTop3Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellAquithermTop3Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellAquithermTop3Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellAquithermTop3Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellAquithermTop3Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellAquithermTop3Goal = rowAquithermTop.Cells[9];
             cellAquithermTop3Goal.Format.Font.Size = 8;
             cellAquithermTop3Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellAquithermTop3Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellAquithermTop3Goal.AddParagraph($"{positionGoal}");
 
             var cellAquithermTop3Info = rowAquithermTop2.Cells[7];
             cellAquithermTop3Info.Format.Font.Size = 8;
@@ -5197,23 +5253,31 @@ namespace FinchInventory.CustomClasses
             var cellAquithermTop4Past = rowAquithermTop.Cells[10];
             cellAquithermTop4Past.Format.Font.Size = 8;
             cellAquithermTop4Past.VerticalAlignment = VerticalAlignment.Center;
-            cellAquithermTop4Past.AddParagraph($"{GetPastAverage(4, 28)}");
+            pastAverage = GetPastAverage(4, 28);
+            if (pastAverage > 0)
+                cellAquithermTop4Past.AddParagraph($"{pastAverage}");
 
             var cellAquithermTop4Current = rowAquithermTop.Cells[11];
             cellAquithermTop4Current.Format.Font.Size = 8;
             cellAquithermTop4Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingAquithermTop4);
             positionGoal = GetPositionGoal(4, 28);
-            cellAquithermTop4Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellAquithermTop4Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellAquithermTop4Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellAquithermTop4Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellAquithermTop4Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellAquithermTop4Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellAquithermTop4Goal = rowAquithermTop.Cells[12];
             cellAquithermTop4Goal.Format.Font.Size = 8;
             cellAquithermTop4Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellAquithermTop4Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellAquithermTop4Goal.AddParagraph($"{positionGoal}");
 
             var cellAquithermTop4Info = rowAquithermTop2.Cells[10];
             cellAquithermTop4Info.Format.Font.Size = 8;
@@ -5253,23 +5317,31 @@ namespace FinchInventory.CustomClasses
             var cellNibcoBottom1Past = rowNibcoBottom.Cells[1];
             cellNibcoBottom1Past.Format.Font.Size = 8;
             cellNibcoBottom1Past.VerticalAlignment = VerticalAlignment.Center;
-            cellNibcoBottom1Past.AddParagraph($"{GetPastAverage(1, 29)}");
+            pastAverage = GetPastAverage(1, 29);
+            if (pastAverage > 0)
+                cellNibcoBottom1Past.AddParagraph($"{pastAverage}");
 
             var cellNibcoBottom1Current = rowNibcoBottom.Cells[2];
             cellNibcoBottom1Current.Format.Font.Size = 8;
             cellNibcoBottom1Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingNibcoBottom1);
             positionGoal = GetPositionGoal(1, 29);
-            cellNibcoBottom1Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellNibcoBottom1Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellNibcoBottom1Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellNibcoBottom1Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellNibcoBottom1Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellNibcoBottom1Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellNibcoBottom1Goal = rowNibcoBottom.Cells[3];
             cellNibcoBottom1Goal.Format.Font.Size = 8;
             cellNibcoBottom1Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellNibcoBottom1Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellNibcoBottom1Goal.AddParagraph($"{positionGoal}");
 
             var cellNibcoBottom1Info = rowNibcoBottom2.Cells[1];
             cellNibcoBottom1Info.Format.Font.Size = 8;
@@ -5284,23 +5356,31 @@ namespace FinchInventory.CustomClasses
             var cellNibcoBottom2Past = rowNibcoBottom.Cells[4];
             cellNibcoBottom2Past.Format.Font.Size = 8;
             cellNibcoBottom2Past.VerticalAlignment = VerticalAlignment.Center;
-            cellNibcoBottom2Past.AddParagraph($"{GetPastAverage(2, 29)}");
+            pastAverage = GetPastAverage(2, 29);
+            if (pastAverage > 0)
+                cellNibcoBottom2Past.AddParagraph($"{pastAverage}");
 
             var cellNibcoBottom2Current = rowNibcoBottom.Cells[5];
             cellNibcoBottom2Current.Format.Font.Size = 8;
             cellNibcoBottom2Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingNibcoBottom2);
             positionGoal = GetPositionGoal(2, 29);
-            cellNibcoBottom2Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellNibcoBottom2Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellNibcoBottom2Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellNibcoBottom2Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellNibcoBottom2Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellNibcoBottom2Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellNibcoBottom2Goal = rowNibcoBottom.Cells[6];
             cellNibcoBottom2Goal.Format.Font.Size = 8;
             cellNibcoBottom2Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellNibcoBottom2Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellNibcoBottom2Goal.AddParagraph($"{positionGoal}");
 
             var cellNibcoBottom2Info = rowNibcoBottom2.Cells[4];
             cellNibcoBottom2Info.Format.Font.Size = 8;
@@ -5315,23 +5395,31 @@ namespace FinchInventory.CustomClasses
             var cellNibcoBottom3Past = rowNibcoBottom.Cells[7];
             cellNibcoBottom3Past.Format.Font.Size = 8;
             cellNibcoBottom3Past.VerticalAlignment = VerticalAlignment.Center;
-            cellNibcoBottom3Past.AddParagraph($"{GetPastAverage(3, 29)}");
+            pastAverage = GetPastAverage(3, 29);
+            if (pastAverage > 0)
+                cellNibcoBottom3Past.AddParagraph($"{pastAverage}");
 
             var cellNibcoBottom3Current = rowNibcoBottom.Cells[8];
             cellNibcoBottom3Current.Format.Font.Size = 8;
             cellNibcoBottom3Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingNibcoBottom3);
             positionGoal = GetPositionGoal(3, 29);
-            cellNibcoBottom3Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellNibcoBottom3Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellNibcoBottom3Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellNibcoBottom3Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellNibcoBottom3Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellNibcoBottom3Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellNibcoBottom3Goal = rowNibcoBottom.Cells[9];
             cellNibcoBottom3Goal.Format.Font.Size = 8;
             cellNibcoBottom3Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellNibcoBottom3Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellNibcoBottom3Goal.AddParagraph($"{positionGoal}");
 
             var cellNibcoBottom3Info = rowNibcoBottom2.Cells[7];
             cellNibcoBottom3Info.Format.Font.Size = 8;
@@ -5346,23 +5434,31 @@ namespace FinchInventory.CustomClasses
             var cellNibcoBottom4Past = rowNibcoBottom.Cells[10];
             cellNibcoBottom4Past.Format.Font.Size = 8;
             cellNibcoBottom4Past.VerticalAlignment = VerticalAlignment.Center;
-            cellNibcoBottom4Past.AddParagraph($"{GetPastAverage(4, 29)}");
+            pastAverage = GetPastAverage(4, 29);
+            if (pastAverage > 0)
+                cellNibcoBottom4Past.AddParagraph($"{pastAverage}");
 
             var cellNibcoBottom4Current = rowNibcoBottom.Cells[11];
             cellNibcoBottom4Current.Format.Font.Size = 8;
             cellNibcoBottom4Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingNibcoBottom4);
             positionGoal = GetPositionGoal(4, 29);
-            cellNibcoBottom4Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellNibcoBottom4Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellNibcoBottom4Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellNibcoBottom4Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellNibcoBottom4Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellNibcoBottom4Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellNibcoBottom4Goal = rowNibcoBottom.Cells[12];
             cellNibcoBottom4Goal.Format.Font.Size = 8;
             cellNibcoBottom4Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellNibcoBottom4Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellNibcoBottom4Goal.AddParagraph($"{positionGoal}");
 
             var cellNibcoBottom4Info = rowNibcoBottom2.Cells[10];
             cellNibcoBottom4Info.Format.Font.Size = 8;
@@ -5402,23 +5498,31 @@ namespace FinchInventory.CustomClasses
             var cellCouch1Past = rowCouch.Cells[1];
             cellCouch1Past.Format.Font.Size = 8;
             cellCouch1Past.VerticalAlignment = VerticalAlignment.Center;
-            cellCouch1Past.AddParagraph($"{GetPastAverage(1, 30)}");
+            pastAverage = GetPastAverage(1, 30);
+            if (pastAverage > 0)
+                cellCouch1Past.AddParagraph($"{pastAverage}");
 
             var cellCouch1Current = rowCouch.Cells[2];
             cellCouch1Current.Format.Font.Size = 8;
             cellCouch1Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingCouch1);
             positionGoal = GetPositionGoal(1, 30);
-            cellCouch1Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellCouch1Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellCouch1Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellCouch1Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellCouch1Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellCouch1Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellCouch1Goal = rowCouch.Cells[3];
             cellCouch1Goal.Format.Font.Size = 8;
             cellCouch1Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellCouch1Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellCouch1Goal.AddParagraph($"{positionGoal}");
 
             var cellCouch1Info = rowCouch2.Cells[1];
             cellCouch1Info.Format.Font.Size = 8;
@@ -5433,23 +5537,31 @@ namespace FinchInventory.CustomClasses
             var cellCouch2Past = rowCouch.Cells[4];
             cellCouch2Past.Format.Font.Size = 8;
             cellCouch2Past.VerticalAlignment = VerticalAlignment.Center;
-            cellCouch2Past.AddParagraph($"{GetPastAverage(2, 30)}");
+            pastAverage = GetPastAverage(2, 30);
+            if (pastAverage > 0)
+                cellCouch2Past.AddParagraph($"{pastAverage}");
 
             var cellCouch2Current = rowCouch.Cells[5];
             cellCouch2Current.Format.Font.Size = 8;
             cellCouch2Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingCouch2);
             positionGoal = GetPositionGoal(2, 30);
-            cellCouch2Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellCouch2Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellCouch2Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellCouch2Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellCouch2Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellCouch2Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellCouch2Goal = rowCouch.Cells[6];
             cellCouch2Goal.Format.Font.Size = 8;
             cellCouch2Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellCouch2Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellCouch2Goal.AddParagraph($"{positionGoal}");
 
             var cellCouch2Info = rowCouch2.Cells[4];
             cellCouch2Info.Format.Font.Size = 8;
@@ -5464,23 +5576,31 @@ namespace FinchInventory.CustomClasses
             var cellCouch3Past = rowCouch.Cells[7];
             cellCouch3Past.Format.Font.Size = 8;
             cellCouch3Past.VerticalAlignment = VerticalAlignment.Center;
-            cellCouch3Past.AddParagraph($"{GetPastAverage(3, 30)}");
+            pastAverage = GetPastAverage(3, 30);
+            if (pastAverage > 0)
+                cellCouch3Past.AddParagraph($"{pastAverage}");
 
             var cellCouch3Current = rowCouch.Cells[8];
             cellCouch3Current.Format.Font.Size = 8;
             cellCouch3Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingCouch3);
             positionGoal = GetPositionGoal(3, 30);
-            cellCouch3Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellCouch3Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellCouch3Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellCouch3Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellCouch3Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellCouch3Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellCouch3Goal = rowCouch.Cells[9];
             cellCouch3Goal.Format.Font.Size = 8;
             cellCouch3Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellCouch3Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellCouch3Goal.AddParagraph($"{positionGoal}");
 
             var cellCouch3Info = rowCouch2.Cells[7];
             cellCouch3Info.Format.Font.Size = 8;
@@ -5495,23 +5615,31 @@ namespace FinchInventory.CustomClasses
             var cellCouch4Past = rowCouch.Cells[10];
             cellCouch4Past.Format.Font.Size = 8;
             cellCouch4Past.VerticalAlignment = VerticalAlignment.Center;
-            cellCouch4Past.AddParagraph($"{GetPastAverage(4, 30)}");
+            pastAverage = GetPastAverage(4, 30);
+            if (pastAverage > 0)
+                cellCouch4Past.AddParagraph($"{pastAverage}");
 
             var cellCouch4Current = rowCouch.Cells[11];
             cellCouch4Current.Format.Font.Size = 8;
             cellCouch4Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingCouch4);
             positionGoal = GetPositionGoal(4, 30);
-            cellCouch4Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellCouch4Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellCouch4Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellCouch4Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellCouch4Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellCouch4Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellCouch4Goal = rowCouch.Cells[12];
             cellCouch4Goal.Format.Font.Size = 8;
             cellCouch4Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellCouch4Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellCouch4Goal.AddParagraph($"{positionGoal}");
 
             var cellCouch4Info = rowCouch2.Cells[10];
             cellCouch4Info.Format.Font.Size = 8;
@@ -5551,23 +5679,31 @@ namespace FinchInventory.CustomClasses
             var cellLInHope1Past = rowLInHope.Cells[1];
             cellLInHope1Past.Format.Font.Size = 8;
             cellLInHope1Past.VerticalAlignment = VerticalAlignment.Center;
-            cellLInHope1Past.AddParagraph($"{GetPastAverage(1, 31)}");
+            pastAverage = GetPastAverage(1, 31);
+            if (pastAverage > 0)
+                cellLInHope1Past.AddParagraph($"{pastAverage}");
 
             var cellLInHope1Current = rowLInHope.Cells[2];
             cellLInHope1Current.Format.Font.Size = 8;
             cellLInHope1Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingLInHope1);
             positionGoal = GetPositionGoal(1, 31);
-            cellLInHope1Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellLInHope1Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellLInHope1Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellLInHope1Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellLInHope1Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellLInHope1Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellLInHope1Goal = rowLInHope.Cells[3];
             cellLInHope1Goal.Format.Font.Size = 8;
             cellLInHope1Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellLInHope1Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellLInHope1Goal.AddParagraph($"{positionGoal}");
 
             var cellLInHope1Info = rowLInHope2.Cells[1];
             cellLInHope1Info.Format.Font.Size = 8;
@@ -5582,23 +5718,31 @@ namespace FinchInventory.CustomClasses
             var cellLInHope2Past = rowLInHope.Cells[4];
             cellLInHope2Past.Format.Font.Size = 8;
             cellLInHope2Past.VerticalAlignment = VerticalAlignment.Center;
-            cellLInHope2Past.AddParagraph($"{GetPastAverage(2, 31)}");
+            pastAverage = GetPastAverage(2, 31);
+            if (pastAverage > 0)
+                cellLInHope2Past.AddParagraph($"{pastAverage}");
 
             var cellLInHope2Current = rowLInHope.Cells[5];
             cellLInHope2Current.Format.Font.Size = 8;
             cellLInHope2Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingLInHope2);
             positionGoal = GetPositionGoal(2, 31);
-            cellLInHope2Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellLInHope2Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellLInHope2Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellLInHope2Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellLInHope2Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellLInHope2Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellLInHope2Goal = rowLInHope.Cells[6];
             cellLInHope2Goal.Format.Font.Size = 8;
             cellLInHope2Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellLInHope2Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellLInHope2Goal.AddParagraph($"{positionGoal}");
 
             var cellLInHope2Info = rowLInHope2.Cells[4];
             cellLInHope2Info.Format.Font.Size = 8;
@@ -5613,23 +5757,31 @@ namespace FinchInventory.CustomClasses
             var cellLInHope3Past = rowLInHope.Cells[7];
             cellLInHope3Past.Format.Font.Size = 8;
             cellLInHope3Past.VerticalAlignment = VerticalAlignment.Center;
-            cellLInHope3Past.AddParagraph($"{GetPastAverage(3, 31)}");
+            pastAverage = GetPastAverage(3, 31);
+            if (pastAverage > 0)
+                cellLInHope3Past.AddParagraph($"{pastAverage}");
 
             var cellLInHope3Current = rowLInHope.Cells[8];
             cellLInHope3Current.Format.Font.Size = 8;
             cellLInHope3Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingLInHope1);
             positionGoal = GetPositionGoal(3, 31);
-            cellLInHope3Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellLInHope3Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellLInHope3Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellLInHope3Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellLInHope3Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellLInHope3Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellLInHope3Goal = rowLInHope.Cells[9];
             cellLInHope3Goal.Format.Font.Size = 8;
             cellLInHope3Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellLInHope3Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellLInHope3Goal.AddParagraph($"{positionGoal}");
 
             var cellLInHope3Info = rowLInHope2.Cells[7];
             cellLInHope3Info.Format.Font.Size = 8;
@@ -5644,23 +5796,31 @@ namespace FinchInventory.CustomClasses
             var cellLInHope4Past = rowLInHope.Cells[10];
             cellLInHope4Past.Format.Font.Size = 8;
             cellLInHope4Past.VerticalAlignment = VerticalAlignment.Center;
-            cellLInHope4Past.AddParagraph($"{GetPastAverage(4, 31)}");
+            pastAverage = GetPastAverage(4, 31);
+            if (pastAverage > 0)
+                cellLInHope4Past.AddParagraph($"{pastAverage}");
 
             var cellLInHope4Current = rowLInHope.Cells[11];
             cellLInHope4Current.Format.Font.Size = 8;
             cellLInHope4Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingLInHope4);
             positionGoal = GetPositionGoal(4, 31);
-            cellLInHope4Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellLInHope4Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellLInHope4Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellLInHope4Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellLInHope4Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellLInHope4Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellLInHope4Goal = rowLInHope.Cells[12];
             cellLInHope4Goal.Format.Font.Size = 8;
             cellLInHope4Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellLInHope4Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellLInHope4Goal.AddParagraph($"{positionGoal}");
 
             var cellLInHope4Info = rowLInHope2.Cells[10];
             cellLInHope4Info.Format.Font.Size = 8;
@@ -5700,23 +5860,31 @@ namespace FinchInventory.CustomClasses
             var cellLOutHope1Past = rowLOutHope.Cells[1];
             cellLOutHope1Past.Format.Font.Size = 8;
             cellLOutHope1Past.VerticalAlignment = VerticalAlignment.Center;
-            cellLOutHope1Past.AddParagraph($"{GetPastAverage(1, 32)}");
+            pastAverage = GetPastAverage(1, 32);
+            if (pastAverage > 0)
+                cellLOutHope1Past.AddParagraph($"{pastAverage}");
 
             var cellLOutHope1Current = rowLOutHope.Cells[2];
             cellLOutHope1Current.Format.Font.Size = 8;
             cellLOutHope1Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingLOutHope1);
             positionGoal = GetPositionGoal(1, 32);
-            cellLOutHope1Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellLOutHope1Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellLOutHope1Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellLOutHope1Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellLOutHope1Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellLOutHope1Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellLOutHope1Goal = rowLOutHope.Cells[3];
             cellLOutHope1Goal.Format.Font.Size = 8;
             cellLOutHope1Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellLOutHope1Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellLOutHope1Goal.AddParagraph($"{positionGoal}");
 
             var cellLOutHope1Info = rowLOutHope2.Cells[1];
             cellLOutHope1Info.Format.Font.Size = 8;
@@ -5731,23 +5899,31 @@ namespace FinchInventory.CustomClasses
             var cellLOutHope2Past = rowLOutHope.Cells[4];
             cellLOutHope2Past.Format.Font.Size = 8;
             cellLOutHope2Past.VerticalAlignment = VerticalAlignment.Center;
-            cellLOutHope2Past.AddParagraph($"{GetPastAverage(2, 32)}");
+            pastAverage = GetPastAverage(2, 32);
+            if (pastAverage > 0)
+                cellLOutHope2Past.AddParagraph($"{pastAverage}");
 
             var cellLOutHope2Current = rowLOutHope.Cells[5];
             cellLOutHope2Current.Format.Font.Size = 8;
             cellLOutHope2Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingLOutHope2);
             positionGoal = GetPositionGoal(2, 32);
-            cellLOutHope2Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellLOutHope2Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellLOutHope2Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellLOutHope2Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellLOutHope2Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellLOutHope2Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellLOutHope2Goal = rowLOutHope.Cells[6];
             cellLOutHope2Goal.Format.Font.Size = 8;
             cellLOutHope2Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellLOutHope2Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellLOutHope2Goal.AddParagraph($"{positionGoal}");
 
             var cellLOutHope2Info = rowLOutHope2.Cells[4];
             cellLOutHope2Info.Format.Font.Size = 8;
@@ -5762,23 +5938,31 @@ namespace FinchInventory.CustomClasses
             var cellLOutHope3Past = rowLOutHope.Cells[7];
             cellLOutHope3Past.Format.Font.Size = 8;
             cellLOutHope3Past.VerticalAlignment = VerticalAlignment.Center;
-            cellLOutHope3Past.AddParagraph($"{GetPastAverage(3, 32)}");
+            pastAverage = GetPastAverage(3, 32);
+            if (pastAverage > 0)
+                cellLOutHope3Past.AddParagraph($"{pastAverage}");
 
             var cellLOutHope3Current = rowLOutHope.Cells[8];
             cellLOutHope3Current.Format.Font.Size = 8;
             cellLOutHope3Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingLOutHope3);
             positionGoal = GetPositionGoal(3, 32);
-            cellLOutHope3Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellLOutHope3Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellLOutHope3Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellLOutHope3Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellLOutHope3Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellLOutHope3Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellLOutHope3Goal = rowLOutHope.Cells[9];
             cellLOutHope3Goal.Format.Font.Size = 8;
             cellLOutHope3Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellLOutHope3Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellLOutHope3Goal.AddParagraph($"{positionGoal}");
 
             var cellLOutHope3Info = rowLOutHope2.Cells[7];
             cellLOutHope3Info.Format.Font.Size = 8;
@@ -5793,23 +5977,31 @@ namespace FinchInventory.CustomClasses
             var cellLOutHope4Past = rowLOutHope.Cells[10];
             cellLOutHope4Past.Format.Font.Size = 8;
             cellLOutHope4Past.VerticalAlignment = VerticalAlignment.Center;
-            cellLOutHope4Past.AddParagraph($"{GetPastAverage(4, 32)}");
+            pastAverage = GetPastAverage(4, 32);
+            if (pastAverage > 0)
+                cellLOutHope4Past.AddParagraph($"{pastAverage}");
 
             var cellLOutHope4Current = rowLOutHope.Cells[11];
             cellLOutHope4Current.Format.Font.Size = 8;
             cellLOutHope4Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingLOutHope4);
             positionGoal = GetPositionGoal(4, 32);
-            cellLOutHope4Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellLOutHope4Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellLOutHope4Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellLOutHope4Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellLOutHope4Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellLOutHope4Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellLOutHope4Goal = rowLOutHope.Cells[12];
             cellLOutHope4Goal.Format.Font.Size = 8;
             cellLOutHope4Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellLOutHope4Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellLOutHope4Goal.AddParagraph($"{positionGoal}");
 
             var cellLOutHope4Info = rowLOutHope2.Cells[10];
             cellLOutHope4Info.Format.Font.Size = 8;
@@ -5849,23 +6041,31 @@ namespace FinchInventory.CustomClasses
             var cellBottomPressWringer1Past = rowBottomPressWringer.Cells[1];
             cellBottomPressWringer1Past.Format.Font.Size = 8;
             cellBottomPressWringer1Past.VerticalAlignment = VerticalAlignment.Center;
-            cellBottomPressWringer1Past.AddParagraph($"{GetPastAverage(1, 33)}");
+            pastAverage = GetPastAverage(1, 33);
+            if (pastAverage > 0)
+                cellBottomPressWringer1Past.AddParagraph($"{pastAverage}");
 
             var cellBottomPressWringer1Current = rowBottomPressWringer.Cells[2];
             cellBottomPressWringer1Current.Format.Font.Size = 8;
             cellBottomPressWringer1Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingBottomPressWringer1);
             positionGoal = GetPositionGoal(1, 33);
-            cellBottomPressWringer1Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellBottomPressWringer1Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellBottomPressWringer1Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellBottomPressWringer1Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellBottomPressWringer1Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellBottomPressWringer1Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellBottomPressWringer1Goal = rowBottomPressWringer.Cells[3];
             cellBottomPressWringer1Goal.Format.Font.Size = 8;
             cellBottomPressWringer1Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellBottomPressWringer1Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellBottomPressWringer1Goal.AddParagraph($"{positionGoal}");
 
             var cellBottomPressWringer1Info = rowBottomPressWringer2.Cells[1];
             cellBottomPressWringer1Info.Format.Font.Size = 8;
@@ -5880,23 +6080,31 @@ namespace FinchInventory.CustomClasses
             var cellBottomPressWringer2Past = rowBottomPressWringer.Cells[4];
             cellBottomPressWringer2Past.Format.Font.Size = 8;
             cellBottomPressWringer2Past.VerticalAlignment = VerticalAlignment.Center;
-            cellBottomPressWringer2Past.AddParagraph($"{GetPastAverage(2, 33)}");
+            pastAverage = GetPastAverage(2, 33);
+            if (pastAverage > 0)
+                cellBottomPressWringer2Past.AddParagraph($"{pastAverage}");
 
             var cellBottomPressWringer2Current = rowBottomPressWringer.Cells[5];
             cellBottomPressWringer2Current.Format.Font.Size = 8;
             cellBottomPressWringer2Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingBottomPressWringer2);
             positionGoal = GetPositionGoal(2, 33);
-            cellBottomPressWringer2Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellBottomPressWringer2Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellBottomPressWringer2Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellBottomPressWringer2Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellBottomPressWringer2Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellBottomPressWringer2Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellBottomPressWringer2Goal = rowBottomPressWringer.Cells[6];
             cellBottomPressWringer2Goal.Format.Font.Size = 8;
             cellBottomPressWringer2Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellBottomPressWringer2Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellBottomPressWringer2Goal.AddParagraph($"{positionGoal}");
 
             var cellBottomPressWringer2Info = rowBottomPressWringer2.Cells[4];
             cellBottomPressWringer2Info.Format.Font.Size = 8;
@@ -5911,23 +6119,31 @@ namespace FinchInventory.CustomClasses
             var cellBottomPressWringer3Past = rowBottomPressWringer.Cells[7];
             cellBottomPressWringer3Past.Format.Font.Size = 8;
             cellBottomPressWringer3Past.VerticalAlignment = VerticalAlignment.Center;
-            cellBottomPressWringer3Past.AddParagraph($"{GetPastAverage(3, 33)}");
+            pastAverage = GetPastAverage(3, 33);
+            if (pastAverage > 0)
+                cellBottomPressWringer3Past.AddParagraph($"{pastAverage}");
 
             var cellBottomPressWringer3Current = rowBottomPressWringer.Cells[8];
             cellBottomPressWringer3Current.Format.Font.Size = 8;
             cellBottomPressWringer3Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingBottomPressWringer3);
             positionGoal = GetPositionGoal(3, 33);
-            cellBottomPressWringer3Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellBottomPressWringer3Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellBottomPressWringer3Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellBottomPressWringer3Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellBottomPressWringer3Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellBottomPressWringer3Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellBottomPressWringer3Goal = rowBottomPressWringer.Cells[9];
             cellBottomPressWringer3Goal.Format.Font.Size = 8;
             cellBottomPressWringer3Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellBottomPressWringer3Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellBottomPressWringer3Goal.AddParagraph($"{positionGoal}");
 
             var cellBottomPressWringer3Info = rowBottomPressWringer2.Cells[7];
             cellBottomPressWringer3Info.Format.Font.Size = 8;
@@ -5942,23 +6158,31 @@ namespace FinchInventory.CustomClasses
             var cellBottomPressWringer4Past = rowBottomPressWringer.Cells[10];
             cellBottomPressWringer4Past.Format.Font.Size = 8;
             cellBottomPressWringer4Past.VerticalAlignment = VerticalAlignment.Center;
-            cellBottomPressWringer4Past.AddParagraph($"{GetPastAverage(4, 33)}");
+            pastAverage = GetPastAverage(4, 33);
+            if (pastAverage > 0)
+                cellBottomPressWringer4Past.AddParagraph($"{pastAverage}");
 
             var cellBottomPressWringer4Current = rowBottomPressWringer.Cells[11];
             cellBottomPressWringer4Current.Format.Font.Size = 8;
             cellBottomPressWringer4Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingBottomPressWringer4);
             positionGoal = GetPositionGoal(4, 33);
-            cellBottomPressWringer4Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellBottomPressWringer4Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellBottomPressWringer4Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellBottomPressWringer4Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellBottomPressWringer4Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellBottomPressWringer4Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellBottomPressWringer4Goal = rowBottomPressWringer.Cells[12];
             cellBottomPressWringer4Goal.Format.Font.Size = 8;
             cellBottomPressWringer4Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellBottomPressWringer4Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellBottomPressWringer4Goal.AddParagraph($"{positionGoal}");
 
             var cellBottomPressWringer4Info = rowBottomPressWringer2.Cells[10];
             cellBottomPressWringer4Info.Format.Font.Size = 8;
@@ -5998,23 +6222,31 @@ namespace FinchInventory.CustomClasses
             var cellTopPressWringer1Past = rowTopPressWringer.Cells[1];
             cellTopPressWringer1Past.Format.Font.Size = 8;
             cellTopPressWringer1Past.VerticalAlignment = VerticalAlignment.Center;
-            cellTopPressWringer1Past.AddParagraph($"{GetPastAverage(1, 34)}");
+            pastAverage = GetPastAverage(1, 34);
+            if (pastAverage > 0)
+                cellTopPressWringer1Past.AddParagraph($"{pastAverage}");
 
             var cellTopPressWringer1Current = rowTopPressWringer.Cells[2];
             cellTopPressWringer1Current.Format.Font.Size = 8;
             cellTopPressWringer1Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingTopPressWringer1);
             positionGoal = GetPositionGoal(1, 34);
-            cellTopPressWringer1Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellTopPressWringer1Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellTopPressWringer1Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellTopPressWringer1Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellTopPressWringer1Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellTopPressWringer1Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellTopPressWringer1Goal = rowTopPressWringer.Cells[3];
             cellTopPressWringer1Goal.Format.Font.Size = 8;
             cellTopPressWringer1Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellTopPressWringer1Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellTopPressWringer1Goal.AddParagraph($"{positionGoal}");
 
             var cellTopPressWringer1Info = rowTopPressWringer2.Cells[1];
             cellTopPressWringer1Info.Format.Font.Size = 8;
@@ -6029,23 +6261,31 @@ namespace FinchInventory.CustomClasses
             var cellTopPressWringer2Past = rowTopPressWringer.Cells[4];
             cellTopPressWringer2Past.Format.Font.Size = 8;
             cellTopPressWringer2Past.VerticalAlignment = VerticalAlignment.Center;
-            cellTopPressWringer2Past.AddParagraph($"{GetPastAverage(2, 34)}");
+            pastAverage = GetPastAverage(2, 34);
+            if (pastAverage > 0)
+                cellTopPressWringer2Past.AddParagraph($"{pastAverage}");
 
             var cellTopPressWringer2Current = rowTopPressWringer.Cells[5];
             cellTopPressWringer2Current.Format.Font.Size = 8;
             cellTopPressWringer2Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingTopPressWringer2);
             positionGoal = GetPositionGoal(2, 34);
-            cellTopPressWringer2Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellTopPressWringer2Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellTopPressWringer2Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellTopPressWringer2Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellTopPressWringer2Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellTopPressWringer2Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellTopPressWringer2Goal = rowTopPressWringer.Cells[6];
             cellTopPressWringer2Goal.Format.Font.Size = 8;
             cellTopPressWringer2Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellTopPressWringer2Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellTopPressWringer2Goal.AddParagraph($"{positionGoal}");
 
             var cellTopPressWringer2Info = rowTopPressWringer2.Cells[4];
             cellTopPressWringer2Info.Format.Font.Size = 8;
@@ -6060,23 +6300,31 @@ namespace FinchInventory.CustomClasses
             var cellTopPressWringer3Past = rowTopPressWringer.Cells[7];
             cellTopPressWringer3Past.Format.Font.Size = 8;
             cellTopPressWringer3Past.VerticalAlignment = VerticalAlignment.Center;
-            cellTopPressWringer3Past.AddParagraph($"{GetPastAverage(3, 34)}");
+            pastAverage = GetPastAverage(3, 34);
+            if (pastAverage > 0)
+                cellTopPressWringer3Past.AddParagraph($"{pastAverage}");
 
             var cellTopPressWringer3Current = rowTopPressWringer.Cells[8];
             cellTopPressWringer3Current.Format.Font.Size = 8;
             cellTopPressWringer3Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingTopPressWringer3);
             positionGoal = GetPositionGoal(3, 34);
-            cellTopPressWringer3Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellTopPressWringer3Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellTopPressWringer3Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellTopPressWringer3Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellTopPressWringer3Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellTopPressWringer3Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellTopPressWringer3Goal = rowTopPressWringer.Cells[9];
             cellTopPressWringer3Goal.Format.Font.Size = 8;
             cellTopPressWringer3Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellTopPressWringer3Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellTopPressWringer3Goal.AddParagraph($"{positionGoal}");
 
             var cellTopPressWringer3Info = rowTopPressWringer2.Cells[7];
             cellTopPressWringer3Info.Format.Font.Size = 8;
@@ -6091,23 +6339,31 @@ namespace FinchInventory.CustomClasses
             var cellTopPressWringer4Past = rowTopPressWringer.Cells[10];
             cellTopPressWringer4Past.Format.Font.Size = 8;
             cellTopPressWringer4Past.VerticalAlignment = VerticalAlignment.Center;
-            cellTopPressWringer4Past.AddParagraph($"{GetPastAverage(4, 34)}");
+            pastAverage = GetPastAverage(4, 34);
+            if (pastAverage > 0)
+                cellTopPressWringer4Past.AddParagraph($"{pastAverage}");
 
             var cellTopPressWringer4Current = rowTopPressWringer.Cells[11];
             cellTopPressWringer4Current.Format.Font.Size = 8;
             cellTopPressWringer4Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingTopPressWringer4);
             positionGoal = GetPositionGoal(4, 34);
-            cellTopPressWringer4Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellTopPressWringer4Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellTopPressWringer4Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellTopPressWringer4Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellTopPressWringer4Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellTopPressWringer4Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellTopPressWringer4Goal = rowTopPressWringer.Cells[12];
             cellTopPressWringer4Goal.Format.Font.Size = 8;
             cellTopPressWringer4Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellTopPressWringer4Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellTopPressWringer4Goal.AddParagraph($"{positionGoal}");
 
             var cellTopPressWringer4Info = rowTopPressWringer2.Cells[10];
             cellTopPressWringer4Info.Format.Font.Size = 8;
@@ -6147,23 +6403,31 @@ namespace FinchInventory.CustomClasses
             var cellCouchPaper1Past = rowCouchPaper.Cells[1];
             cellCouchPaper1Past.Format.Font.Size = 8;
             cellCouchPaper1Past.VerticalAlignment = VerticalAlignment.Center;
-            cellCouchPaper1Past.AddParagraph($"{GetPastAverage(1, 36)}");
+            pastAverage = GetPastAverage(1, 36);
+            if (pastAverage > 0)
+                cellCouchPaper1Past.AddParagraph($"{pastAverage}");
 
             var cellCouchPaper1Current = rowCouchPaper.Cells[2];
             cellCouchPaper1Current.Format.Font.Size = 8;
             cellCouchPaper1Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingCouchPaper1);
             positionGoal = GetPositionGoal(1, 36);
-            cellCouchPaper1Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellCouchPaper1Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellCouchPaper1Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellCouchPaper1Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellCouchPaper1Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellCouchPaper1Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellCouchPaper1Goal = rowCouchPaper.Cells[3];
             cellCouchPaper1Goal.Format.Font.Size = 8;
             cellCouchPaper1Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellCouchPaper1Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellCouchPaper1Goal.AddParagraph($"{positionGoal}");
 
             var cellCouchPaper1Info = rowCouchPaper2.Cells[1];
             cellCouchPaper1Info.Format.Font.Size = 8;
@@ -6178,25 +6442,31 @@ namespace FinchInventory.CustomClasses
             var cellCouchPaper2Past = rowCouchPaper.Cells[4];
             cellCouchPaper2Past.Format.Font.Size = 8;
             cellCouchPaper2Past.VerticalAlignment = VerticalAlignment.Center;
-            var couchPaper2Past = db.Clothings.Where(c => c.PM_Number == 2 && c.PositionID == 36 && c.StatusID == 3).Select(c => c.Age).Average();
-            couchPaper2Past = couchPaper2Past != null ? Math.Round((double)couchPaper2Past) : 0;
-            cellCouchPaper2Past.AddParagraph($"{GetPastAverage(2, 36)}");
+            pastAverage = GetPastAverage(2, 36);
+            if (pastAverage > 0)
+                cellCouchPaper2Past.AddParagraph($"{pastAverage}");
 
             var cellCouchPaper2Current = rowCouchPaper.Cells[5];
             cellCouchPaper2Current.Format.Font.Size = 8;
             cellCouchPaper2Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingCouchPaper2);
             positionGoal = GetPositionGoal(2, 36);
-            cellCouchPaper2Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellCouchPaper2Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellCouchPaper2Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellCouchPaper2Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellCouchPaper2Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellCouchPaper2Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellCouchPaper2Goal = rowCouchPaper.Cells[6];
             cellCouchPaper2Goal.Format.Font.Size = 8;
             cellCouchPaper2Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellCouchPaper2Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellCouchPaper2Goal.AddParagraph($"{positionGoal}");
 
             var cellCouchPaper2Info = rowCouchPaper2.Cells[4];
             cellCouchPaper2Info.Format.Font.Size = 8;
@@ -6211,23 +6481,31 @@ namespace FinchInventory.CustomClasses
             var cellCouchPaper3Past = rowCouchPaper.Cells[7];
             cellCouchPaper3Past.Format.Font.Size = 8;
             cellCouchPaper3Past.VerticalAlignment = VerticalAlignment.Center;
-            cellCouchPaper3Past.AddParagraph($"{GetPastAverage(3, 36)}");
+            pastAverage = GetPastAverage(3, 36);
+            if (pastAverage > 0)
+                cellCouchPaper3Past.AddParagraph($"{pastAverage}");
 
             var cellCouchPaper3Current = rowCouchPaper.Cells[8];
             cellCouchPaper3Current.Format.Font.Size = 8;
             cellCouchPaper3Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingCouchPaper3);
             positionGoal = GetPositionGoal(3, 36);
-            cellCouchPaper3Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellCouchPaper3Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellCouchPaper3Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellCouchPaper3Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellCouchPaper3Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellCouchPaper3Current.Shading.Color = Colors.Yellow;
+            }
+
 
             var cellCouchPaper3Goal = rowCouchPaper.Cells[9];
             cellCouchPaper3Goal.Format.Font.Size = 8;
             cellCouchPaper3Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellCouchPaper3Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellCouchPaper3Goal.AddParagraph($"{positionGoal}");
 
             var cellCouchPaper3Info = rowCouchPaper2.Cells[7];
             cellCouchPaper3Info.Format.Font.Size = 8;
@@ -6242,23 +6520,31 @@ namespace FinchInventory.CustomClasses
             var cellCouchPaper4Past = rowCouchPaper.Cells[10];
             cellCouchPaper4Past.Format.Font.Size = 8;
             cellCouchPaper4Past.VerticalAlignment = VerticalAlignment.Center;
-            cellCouchPaper4Past.AddParagraph($"{GetPastAverage(4, 36)}");
+            pastAverage = GetPastAverage(4, 36);
+            if (pastAverage > 0)
+                cellCouchPaper4Past.AddParagraph($"{pastAverage}");
 
             var cellCouchPaper4Current = rowCouchPaper.Cells[11];
             cellCouchPaper4Current.Format.Font.Size = 8;
             cellCouchPaper4Current.VerticalAlignment = VerticalAlignment.Center;
             currentAge = GetCurrentAge(clothingCouchPaper4);
             positionGoal = GetPositionGoal(4, 36);
-            cellCouchPaper4Current.AddParagraph($"{currentAge}");
-            if (currentAge >= positionGoal)
-                cellCouchPaper4Current.Shading.Color = Colors.Red;
-            else if (positionGoal - currentAge <= 35)
-                cellCouchPaper4Current.Shading.Color = Colors.Yellow;
+            if (currentAge > 0)
+                cellCouchPaper4Current.AddParagraph($"{currentAge}");
+            if (currentAge > 0 || positionGoal > 0)
+            {
+                if (currentAge >= positionGoal)
+                    cellCouchPaper4Current.Shading.Color = Colors.Red;
+                else if (positionGoal - currentAge <= 35)
+                    cellCouchPaper4Current.Shading.Color = Colors.Yellow;
+            }
+            
 
             var cellCouchPaper4Goal = rowCouchPaper.Cells[12];
             cellCouchPaper4Goal.Format.Font.Size = 8;
             cellCouchPaper4Goal.VerticalAlignment = VerticalAlignment.Center;
-            cellCouchPaper4Goal.AddParagraph($"{positionGoal}");
+            if (positionGoal > 0)
+                cellCouchPaper4Goal.AddParagraph($"{positionGoal}");
 
             var cellCouchPaper4Info = rowCouchPaper2.Cells[10];
             cellCouchPaper4Info.Format.Font.Size = 8;
