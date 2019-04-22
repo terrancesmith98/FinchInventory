@@ -63,7 +63,7 @@ namespace FinchInventory.CustomClasses
 
             //fill content cells
             var rowCounter = 1;
-            foreach (var clothing in clothings)
+            foreach (var clothing in clothings.OrderBy(x => x.PositionID).ThenByDescending(x => x.Date_Received))
             {
                 Row r = auditTable.AddRow();
                 r.Height = 13;
