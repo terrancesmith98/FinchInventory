@@ -158,6 +158,7 @@
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="CustomClasses\Documents.cs" />
+    <Compile Include="CustomClasses\JsonResponse.cs" />
     <Compile Include="CustomClasses\Styles.cs" />
     <Compile Include="CustomClasses\Tables.cs" />
     <Compile Include="Global.asax.cs">

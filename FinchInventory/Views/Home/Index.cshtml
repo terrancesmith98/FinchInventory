@@ -11,113 +11,147 @@
             <div class="col-lg-12 mt-2">
                 <div id="main-console" class="mt-2 rounded p-3 col-lg-12">
                     <div class="row">
-                        <div class="col-lg-3 main-console">
-                            <a href="~/Clothing/Create" class="btn btn-success mx-2 spinner-button" title="Receive Clothing/Roll"><i class="fas fa-plus mx-2"></i>Receive Item</a>
+                        <div class="col-lg-12 main-console">
+                            <a href="~/Clothing/Create" class="btn btn-success spinner-button" title="Receive Clothing/Roll"><i class="fas fa-plus mx-2"></i>Receive Item</a>
                         </div>
-                        <div class="col-lg-9 main-console">
-                            <a href="#" id="audit-report-btn" class="btn btn-secondary btn-sm ml-5 mr-2 pull-right spinner-button" title="Generate Inventory Audit Report"><i class="fas fa-file-pdf mx-2"></i>Inventory Audit</a>
-                            <a href="#" id="weekly-pm-report-btn" class="btn btn-secondary btn-sm mx-2 pull-right spinner-button" title="Generate Weekly PM Report"><i class="fas fa-file-pdf mx-2"></i>Weekly PM Report</a>
-                            <a href="~/Reports/HistoricalToExcel" id="historical-to-excel" class="btn btn-secondary btn-sm mx-2 pull-right" title="Historical Data to Excel"><i class="fas fa-file-excel mx-2 text-success"></i>Historical to Excel</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 main-console mt-2">
+                            <a href="#" id="audit-report-btn" class="btn btn-secondary btn-sm mr-2 my-sm-2 spinner-button" title="Generate Inventory Audit Report"><i class="fas fa-file-pdf mx-2"></i>Inventory Audit</a>
+                            <a href="#" id="weekly-pm-report-btn" class="btn btn-secondary btn-sm mx-2 my-sm-2  spinner-button" title="Generate Weekly PM Report"><i class="fas fa-file-pdf mx-2"></i>Weekly PM Report</a>
+                            <a href="~/Reports/HistoricalToExcel" id="historical-to-excel" class="btn btn-secondary btn-sm mx-2 my-sm-2" title="Historical Data to Excel"><i class="fas fa-file-excel mx-2 text-success"></i>Historical to Excel</a>
                             @if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(4))
                             {
-                                <a href="~/Reports/InventoryToExcel" id="inventory-to-excel" class="btn btn-secondary btn-sm mx-2 pull-right" title="Full Database to Excel"><i class="fas fa-file-excel mx-2 text-success"></i>Full Database to Excel</a>
+                                <a href="~/Reports/InventoryToExcel" id="inventory-to-excel" class="btn btn-secondary btn-sm mr-2 my-sm-2" title="Full Database to Excel"><i class="fas fa-file-excel mx-2 text-success"></i>Full Database to Excel</a>
                             }
                         </div>
                     </div>
-
-
+                    
                 </div>
 
+
             </div>
+
         </div>
-        <div class="card card-primary mt-3">
-            <div class="card-header">
-                <h2><i class="fas fa-clipboard-list mx-2"></i>Clothing/Roll Tracking</h2>
-            </div>
-            <div class="card-body">
-                <table id="inventory_table" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>PM#</th>
-                            <th>Position</th>
-                            <th>Manuf</th>
-                            <th>Ser#</th>
-                            <th>Received</th>
-                            <th>Placed</th>
-                            <th>Removed</th>
-                            <th>Type</th>
-                            <th>Status</th>
-                            <th>Age</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @{
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-primary mt-3">
+                <div class="card-header">
+                    <h2><i class="fas fa-clipboard-list mx-2"></i>Clothing/Roll Tracking</h2>
+                    <!-- Clothing / Rolls Toggle-->
+                    <div id="typeGroup" class="btn-group btn-group-toggle spinner-button" data-toggle="buttons">
+                        <label class="btn btn-primary active">
+                            <input type="radio" name="typeToggle" id="clothing" autocomplete="off" checked> Clothing
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="typeToggle" id="rolls" autocomplete="off"> Rolls
+                        </label>
+                    </div>
+                    <!-- PM Toggle -->
+                    <div id="pmGroup" class="btn-group btn-group-toggle spinner-button" data-toggle="buttons">
+                        <label class="btn btn-primary active">
+                            <input type="radio" name="pmToggle" id="1" autocomplete="off" checked> 1
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="pmToggle" id="2" autocomplete="off"> 2
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="pmToggle" id="3" autocomplete="off"> 3
+                        </label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="pmToggle" id="4" autocomplete="off"> 4
+                        </label>
+                    </div>
 
-                            foreach (Clothing item in ViewBag.Inventory)
-                            {
-                                var datePlaced = item.Date_Placed_On_Mac.HasValue ? item.Date_Placed_On_Mac.Value.ToString("MM/dd/yyyy") : "None";
-                                var dateRemoved = item.Date_Removed_From_Mac.HasValue ? item.Date_Removed_From_Mac.Value.ToString("MM/dd/yyyy") : "None";
-                                var dateReceived = item.Date_Received.HasValue ? item.Date_Received.Value.ToString("MM/dd/yyyy") : "None";
+                </div>
+                <div class="card-body">
+                    <table id="inventory_table" class="table table-striped table-responsive">
+                        <thead>
+                            <tr>
+                                <th>PM#</th>
+                                <th>Position</th>
+                                <th>Manuf</th>
+                                <th>Ser#</th>
+                                <th>Received</th>
+                                <th>Placed</th>
+                                <th>Removed</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Age</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
 
-                                var location = item.Location.Location1 ?? "None";
-                                var manufacturer = !string.IsNullOrEmpty(item.Manufacturer.Name) ? item.Manufacturer.Name : "None";
-                                var age = 0;
-                                if (item.Age > 0 && item.StatusID != 2)
+                                foreach (Clothing item in ViewBag.Inventory)
                                 {
-                                    age = Convert.ToInt32(item.Age);
-                                }
-                                else if (item.StatusID == 2 && item.Date_Placed_On_Mac != null)
-                                {
-                                    var days = DateTime.Now - (DateTime)item.Date_Placed_On_Mac;
-                                    age = days.Days;
-                                }
-                                <tr>
-                                    <td>@item.PM_Number</td>
-                                    <td>@item.Position.Position1.ToUpper()</td>
-                                    <td>@manufacturer</td>
-                                    <td>@item.Serial_Number</td>
-                                    <td>@dateReceived</td>
-                                    <td>@datePlaced</td>
-                                    <td>@dateRemoved</td>
-                                    <td>@item.Type.Type1.ToUpper()</td>
-                                    <td>@item.Status.Status1.ToUpper()</td>
-                                    <td>@age</td>
-                                    <td class="text-right">
-                                        <div class="pull-right">
+                                    var datePlaced = item.Date_Placed_On_Mac.HasValue ? item.Date_Placed_On_Mac.Value.ToString("MM/dd/yyyy") : "None";
+                                    var dateRemoved = item.Date_Removed_From_Mac.HasValue ? item.Date_Removed_From_Mac.Value.ToString("MM/dd/yyyy") : "None";
+                                    var dateReceived = item.Date_Received.HasValue ? item.Date_Received.Value.ToString("MM/dd/yyyy") : "None";
 
-                                            @if (item.StatusID != 1 && item.StatusID != 3)
-                                            {
-                                                if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(2) || ViewBag.UserRoles.Contains(4))
+                                    var location = item.Location.Location1 ?? "None";
+                                    var manufacturer = !string.IsNullOrEmpty(item.Manufacturer.Name) ? item.Manufacturer.Name : "None";
+                                    var age = 0;
+                                    if (item.Age > 0 && item.StatusID != 2)
+                                    {
+                                        age = Convert.ToInt32(item.Age);
+                                    }
+                                    else if (item.StatusID == 2 && item.Date_Placed_On_Mac != null)
+                                    {
+                                        var days = DateTime.Now - (DateTime)item.Date_Placed_On_Mac;
+                                        age = days.Days;
+                                    }
+                                    <tr>
+                                        <td>@item.PM_Number</td>
+                                        <td>@item.Position.Position1.ToUpper()</td>
+                                        <td>@manufacturer</td>
+                                        <td>@item.Serial_Number</td>
+                                        <td>@dateReceived</td>
+                                        <td>@datePlaced</td>
+                                        <td>@dateRemoved</td>
+                                        <td>@item.Type.Type1.ToUpper()</td>
+                                        <td>@item.Status.Status1.ToUpper()</td>
+                                        <td>@age</td>
+                                        <td class="text-right">
+                                            <div class="pull-right">
+
+                                                @if (item.StatusID != 1 && item.StatusID != 3)
                                                 {
-                                                    <a href="@Url.Action("ReplaceForm", "Clothing", new { id = item.ID})" class="btn btn-success btn-sm replace-roll spinner-button" title="Replace Clothing/Roll"><i class="fas fa-exchange-alt mx-2"></i></a>
+                                                    if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(2) || ViewBag.UserRoles.Contains(4))
+                                                    {
+                                                        <a href="@Url.Action("ReplaceForm", "Clothing", new { id = item.ID})" class="btn btn-success btn-sm replace-roll spinner-button" title="Replace Clothing/Roll"><i class="fas fa-exchange-alt mx-2"></i></a>
+                                                    }
+
+                                                }
+                                                <a href="~/Clothing/Details/@item.ID" class="btn btn-info btn-sm spinner-button" title="Details"><i class="fas fa-info-circle"></i></a>
+                                                @if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(4))
+                                                {
+                                                    <a href="~/Clothing/Edit/@item.ID" class="btn btn-warning btn-sm spinner-button" title="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="~/Clothing/Delete/@item.ID" class="btn btn-danger btn-sm spinner-button" title="Delete"><i class="fas fa-trash-alt"></i></a>
                                                 }
 
-                                            }
-                                            <a href="~/Clothing/Details/@item.ID" class="btn btn-info btn-sm spinner-button" title="Details"><i class="fas fa-info-circle"></i></a>
-                                            @if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(4))
-                                            {
-                                                <a href="~/Clothing/Edit/@item.ID" class="btn btn-warning btn-sm spinner-button" title="Edit"><i class="fas fa-pencil-alt"></i></a>
-                                                <a href="~/Clothing/Delete/@item.ID" class="btn btn-danger btn-sm spinner-button" title="Delete"><i class="fas fa-trash-alt"></i></a>
-                                            }
+
+                                            </div>
 
 
-                                        </div>
+                                        </td>
 
-
-                                    </td>
-
-                                </tr>
+                                    </tr>
+                                }
                             }
-                        }
-                    </tbody>
+                        </tbody>
 
-                </table>
+                    </table>
 
+                </div>
             </div>
         </div>
     </div>
+ 
 </div>
+
 
 @section Scripts
 {
@@ -127,9 +161,23 @@
             var user = '@ViewBag.CurrUser';
             var roles = '@ViewBag.UserRoles';
 
-            console.log(user);
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = window.location.search.substring(1),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,
+                    i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                    }
+                }
+            };
+
             $('#inventory_table').dataTable({
-                //dom: 'Bfrtip',
+                responsive: true,
                 dom:
                     "<'row'<'col-sm-3'l><'col-sm-6 text-center'B><'col-sm-3'f>>" +
                     "<'row'<'col-sm-12'tr>>" +
@@ -156,9 +204,52 @@
                 ],
                 lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 iDisplayLength: 10
+            });
+
+            var pmNumber = getUrlParameter('pmNumber');
+            var type = getUrlParameter('type');
+
+            if (pmNumber != null && pmNumber != undefined) {
+                var selected = $('input:radio[name="pmToggle"][id="' + pmNumber + '"]');
+                selected.parent().siblings().removeClass('active');
+                selected.parent().addClass('active');
             }
 
-            );
+            if (type != null && type != undefined) {
+                var selected = $('input:radio[name="typeToggle"][id="' + type + '"]');
+                selected.parent().siblings().removeClass('active');
+                selected.parent().addClass('active');
+            }
+
+            $('#pmGroup').change(function () {
+                var value = $('input[name="pmToggle"]:checked').prop('id');
+                var type = getUrlParameter('type');
+                var url;
+                if (type != null && type != undefined) {
+                    url = "/home/index?pmNumber=" + value + "&type=" + type;
+                    window.location = url;
+                }
+                else {
+                    url = "/home/index?pmNumber=" + value;
+                    window.location = url;
+                }
+                
+                
+            });
+
+            $('#typeGroup').change(function () {
+                var value = $('input[name="typeToggle"]:checked').prop('id');
+                var pmNumber = getUrlParameter('pmNumber');
+                var url;
+                if (pmNumber != null && pmNumber != undefined) {
+                    url = "/home/index?pmNumber=" + pmNumber + "&type=" + value;
+                    window.location = url;
+                }
+                else {
+                    url = "/home/index?type=" + value;
+                    window.location = url;
+                }
+            });
 
             $('#audit-report-btn').click(function (e) {
                 e.preventDefault();
