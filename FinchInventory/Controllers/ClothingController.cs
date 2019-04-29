@@ -155,6 +155,7 @@ namespace Finch_Inventory.Controllers
             ViewBag.StatusID = new SelectList(db.Status, "ID", "Status1", clothing.StatusID);
             ViewBag.TypeID = new SelectList(db.Types, "ID", "Type1", clothing.TypeID);
             ViewBag.RollTypeID = new SelectList(db.RollTypes, "ID", "Type");
+            ViewBag.ManufacturerID = new SelectList(db.Manufacturers, "ID", "Name", clothing.ManufacturerID);
             ViewBag.Machines = db.Machines.ToList();
 
             return View(clothing);
