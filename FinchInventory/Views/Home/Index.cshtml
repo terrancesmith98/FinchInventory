@@ -267,8 +267,9 @@
                     url: '@Url.Content("~/Reports/CreateInventoryAuditReport")',
                     method: "POST",
                     success: function (response) {
+                        console.log('response: ' + response);
                         $('.spinner').css('display', 'none');
-                        window.open("Content/Reports/" + response);
+                        window.open("../Content/Reports/" + response);
                     }
                 });
             });
@@ -279,8 +280,9 @@
                     url: '@Url.Content("~/Reports/CreateWeeklyPMReport")',
                     method: "POST",
                     success: function (response) {
+                        console.log('response: ' + response);
                         $('.spinner').css('display', 'none');
-                        window.open("Content/Reports/" + response);
+                        window.open("../Content/Reports/" + response);
                     }
                 });
             });

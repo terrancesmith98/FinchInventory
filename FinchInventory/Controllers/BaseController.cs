@@ -28,7 +28,6 @@ namespace FinchInventory.Controllers
 
             db.Dispose();
             db = new FinchDbContext();
-            //var inventory = db.Clothings.ToList();
 
             if (UserEmail != null)
             {
@@ -54,7 +53,6 @@ namespace FinchInventory.Controllers
                 ViewBag.ErrorDetails = $"The current logged in user has the email address {UserEmail}.";
             }
             ViewBag.Admins = db.Admins.ToList();
-            //ViewBag.Inventory = inventory;
         }
     }
 }

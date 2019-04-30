@@ -64,7 +64,7 @@ namespace FinchInventory.CustomClasses
             //fill content cells
             var rowCounter = 1;
             var currentPosID = 0;
-            foreach (var clothing in clothings.OrderBy(x => x.PositionID).ThenByDescending(x => x.Date_Received))
+            foreach (var clothing in clothings.OrderBy(x => x.PositionID).ThenBy(x => x.Date_Received))
             {
                 if (clothing.PositionID != currentPosID && rowCounter != 1)
                 {

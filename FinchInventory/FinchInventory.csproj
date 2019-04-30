@@ -214,6 +214,9 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\Reports\clothing-roll-inventory_1-14-2019.csv" />
+    <Content Include="Content\Reports\Finch_Inventory_Audit.pdf" />
+    <Content Include="Content\Reports\Finch_Weekly_PM_Report.pdf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
