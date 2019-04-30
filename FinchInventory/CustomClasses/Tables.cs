@@ -6624,7 +6624,9 @@ namespace FinchInventory.CustomClasses
         {
             if (clothing != null)
             {
-                return $"{clothing.Manufacturer.Name} {clothing.Serial_Number}";
+                if (clothing.Manufacturer != null)
+                    return $"{clothing.Manufacturer.Name} {clothing.Serial_Number}";
+                else return $"NA {clothing.Serial_Number}";
             }
             return "NA";
 

@@ -12,15 +12,17 @@ namespace Finch_Inventory.Controllers
         private static FinchDbContext db = new FinchDbContext();
         public ActionResult Index()
         {
+            db.Dispose();
+            db = new FinchDbContext();
             if (ViewBag.CurrUser != null)
             {
                 var pmNumber = Request["pmNumber"];
                 var type = Request["type"];
                 var inventory = new List<Clothing>();
-                if (pmNumber != null)
+                if (!string.IsNullOrEmpty(pmNumber))
                 {
                     var pm = Convert.ToInt32(pmNumber);
-                    if (type != null)
+                    if (!string.IsNullOrEmpty(type))
                     {
                         var rollType = 0;
                         switch (type)
@@ -38,7 +40,21 @@ namespace Finch_Inventory.Controllers
                     }
                     else inventory = db.Clothings.Where(c => c.PM_Number == pm).ToList();
                 }
-                else inventory = db.Clothings.Where(c => c.PM_Number == 1).ToList();
+                else if(!string.IsNullOrEmpty(type))
+                {
+                    var rollType = 0;
+                    switch (type)
+                    {
+                        case "rolls":
+                            rollType = 1;
+                            break;
+                        case "clothing":
+                            rollType = 2;
+                            break;
+                    }
+                    inventory = db.Clothings.Where(c => c.RollTypeID == rollType).ToList();
+                }
+                else inventory = db.Clothings.Where(c => c.PM_Number == 1 && c.RollTypeID == 2).ToList();
 
                 ViewBag.Inventory = inventory;
                 return View();

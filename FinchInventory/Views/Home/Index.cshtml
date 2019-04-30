@@ -26,7 +26,7 @@
                             }
                         </div>
                     </div>
-                    
+
                 </div>
 
 
@@ -90,9 +90,19 @@
                                     var datePlaced = item.Date_Placed_On_Mac.HasValue ? item.Date_Placed_On_Mac.Value.ToString("MM/dd/yyyy") : "None";
                                     var dateRemoved = item.Date_Removed_From_Mac.HasValue ? item.Date_Removed_From_Mac.Value.ToString("MM/dd/yyyy") : "None";
                                     var dateReceived = item.Date_Received.HasValue ? item.Date_Received.Value.ToString("MM/dd/yyyy") : "None";
+                                    var manufacturer = string.Empty;
+                                    try
+                                    {
+                                        manufacturer = item.Manufacturer != null && !string.IsNullOrEmpty(item.Manufacturer.Name) ? item.Manufacturer.Name : "None";
 
+                                    }
+                                    catch (Exception)
+                                    {
+
+                                        throw;
+                                    }
                                     var location = item.Location.Location1 ?? "None";
-                                    var manufacturer = !string.IsNullOrEmpty(item.Manufacturer.Name) ? item.Manufacturer.Name : "None";
+
                                     var age = 0;
                                     if (item.Age > 0 && item.StatusID != 2)
                                     {
@@ -149,7 +159,7 @@
             </div>
         </div>
     </div>
- 
+
 </div>
 
 
@@ -233,8 +243,8 @@
                     url = "/home/index?pmNumber=" + value;
                     window.location = url;
                 }
-                
-                
+
+
             });
 
             $('#typeGroup').change(function () {
