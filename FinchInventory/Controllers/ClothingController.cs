@@ -125,7 +125,13 @@ namespace Finch_Inventory.Controllers
                         clothing.LocationID = newLocID;
                     }
                 }
-
+                if (clothing.Date_Placed_On_Mac != null)
+                    clothing.Date_Placed_On_Mac = Convert.ToDateTime(clothing.Date_Placed_On_Mac).Date;
+                if (clothing.Date_Received != null)
+                    clothing.Date_Received = Convert.ToDateTime(clothing.Date_Received).Date;
+                if (clothing.Date_Removed_From_Mac != null)
+                    clothing.Date_Removed_From_Mac = Convert.ToDateTime(clothing.Date_Removed_From_Mac).Date;
+                
 
                 db.Clothings.Add(clothing);
                 await db.SaveChangesAsync();
@@ -172,6 +178,12 @@ namespace Finch_Inventory.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (clothing.Date_Placed_On_Mac != null)
+                    clothing.Date_Placed_On_Mac = Convert.ToDateTime(clothing.Date_Placed_On_Mac).Date;
+                if (clothing.Date_Received != null)
+                    clothing.Date_Received = Convert.ToDateTime(clothing.Date_Received).Date;
+                if (clothing.Date_Removed_From_Mac != null)
+                    clothing.Date_Removed_From_Mac = Convert.ToDateTime(clothing.Date_Removed_From_Mac).Date;
                 db.Entry(clothing).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 db.Dispose();
@@ -253,11 +265,12 @@ namespace Finch_Inventory.Controllers
                 try
                 {
                     //update Date Removed for roll to be replaced
-                    existing.Date_Removed_From_Mac = date;
+                    existing.Date_Removed_From_Mac = date.Date;
                     //update Status to History for roll to be replaced
                     existing.StatusID = 3;
                     existing.Comments = comments;
-                    replacement.Date_Placed_On_Mac = date;
+                    replacement.Date_Placed_On_Mac = date.Date;
+                    //update Status to On Machine for replacement roll
                     replacement.StatusID = 2;
                     replacement.PositionID = existing.PositionID;
                     db.SaveChanges();

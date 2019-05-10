@@ -100,7 +100,10 @@
                             <div class="form-row">
                                 @Html.LabelFor(model => model.Date_Received, "Received", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
                                 <div class="col-md-9">
-                                    @Html.EditorFor(model => model.Date_Received, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @{ 
+                                        var dateReceived = Model.Date_Received != null ? Convert.ToDateTime(Model.Date_Received).ToString("MM-dd-yyyy") : string.Empty;
+                                    }
+                                    <input type="text" class="form-control datepicker" name="Date_Received" value="@dateReceived" />
                                     @Html.ValidationMessageFor(model => model.Date_Received, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -111,7 +114,10 @@
                             <div class="form-row">
                                 @Html.LabelFor(model => model.Date_Placed_On_Mac, "Placed on Machine", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
                                 <div class="col-md-9">
-                                    @Html.EditorFor(model => model.Date_Placed_On_Mac, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @{
+                                        var datePlaced = Model.Date_Placed_On_Mac != null ? Convert.ToDateTime(Model.Date_Placed_On_Mac).ToString("MM-dd-yyyy") : string.Empty;
+                                    }
+                                    <input type="text" class="form-control datepicker" name="Date_Placed_On_Mac" value="@datePlaced" />
                                     @Html.ValidationMessageFor(model => model.Date_Placed_On_Mac, "", new { @class = "text-danger" })
                                 </div>
                             </div>
@@ -122,7 +128,10 @@
                             <div class="form-row">
                                 @Html.LabelFor(model => model.Date_Removed_From_Mac, "Removed from Machine", htmlAttributes: new { @class = "control-label col-md-3 text-right" })
                                 <div class="col-md-9">
-                                    @Html.EditorFor(model => model.Date_Removed_From_Mac, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                                    @{
+                                        var dateRemoved = Model.Date_Removed_From_Mac != null ? Convert.ToDateTime(Model.Date_Removed_From_Mac).ToString("MM-dd-yyyy") : string.Empty;
+                                    }
+                                    <input type="text" class="form-control datepicker" name="Date_Removed_From_Mac" value="@dateRemoved" />
                                     @Html.ValidationMessageFor(model => model.Date_Removed_From_Mac, "", new { @class = "text-danger" })
                                 </div>
                             </div>
