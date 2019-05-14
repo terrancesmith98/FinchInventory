@@ -49,23 +49,31 @@ namespace Finch_Inventory.Controllers
         [HttpPost]
         public string CreateWeeklyPMReport()
         {
-            var currentClothing = db.Clothings.Where(c => c.StatusID == 2 && c.RollTypeID == 2).ToList();
-            var currentRolls = db.Clothings.Where(c => c.StatusID == 2 && c.RollTypeID == 1).ToList();
-            //create Migradoc Document
-            Document document = Documents.WeeklyPMReport(currentClothing, currentRolls);
-            PageSetup pageSetup = document.DefaultPageSetup.Clone();
-            // set orientation
+            try
+            {
+                var currentClothing = db.Clothings.Where(c => c.StatusID == 2 && c.RollTypeID == 2).ToList();
+                var currentRolls = db.Clothings.Where(c => c.StatusID == 2 && c.RollTypeID == 1).ToList();
+                //create Migradoc Document
+                Document document = Documents.WeeklyPMReport(currentClothing, currentRolls);
+                PageSetup pageSetup = document.DefaultPageSetup.Clone();
+                // set orientation
 
-            pageSetup.Orientation = MigraDoc.DocumentObjectModel.Orientation.Landscape;
-            //create PDF renderer
-            PdfDocumentRenderer renderer = new PdfDocumentRenderer(true);
-            renderer.Document = document;
-            renderer.RenderDocument();
-            var fileName = "Finch_Weekly_PM_Report.pdf";
-            var filePath = Path.Combine(Server.MapPath("~/Content/Reports"), fileName);
-            renderer.PdfDocument.Save(filePath);
+                pageSetup.Orientation = MigraDoc.DocumentObjectModel.Orientation.Landscape;
+                //create PDF renderer
+                PdfDocumentRenderer renderer = new PdfDocumentRenderer(true);
+                renderer.Document = document;
+                renderer.RenderDocument();
+                var fileName = "Finch_Weekly_PM_Report.pdf";
+                var filePath = Path.Combine(Server.MapPath("~/Content/Reports"), fileName);
+                renderer.PdfDocument.Save(filePath);
 
-            return fileName;
+                return fileName;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+            
         }
 
         [HttpGet]

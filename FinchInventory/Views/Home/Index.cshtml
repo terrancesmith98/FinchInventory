@@ -283,6 +283,10 @@
                         console.log('response: ' + response);
                         $('.spinner').css('display', 'none');
                         window.open("../Content/Reports/" + response);
+                    },
+                    error: function (response) {
+                        $('.spinner').css('display', 'none');
+                        alert(response);
                     }
                 });
             });

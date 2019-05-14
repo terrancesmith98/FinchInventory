@@ -6589,8 +6589,14 @@ namespace FinchInventory.CustomClasses
 
         private static double GetPastAverage(int pmID, int posID)
         {
+            var averageAge = 0.0;
             var average = db.Clothings.Where(c => c.PM_Number == pmID && c.PositionID == posID && c.StatusID == 3).OrderByDescending(d => d.Date_Removed_From_Mac).FirstOrDefault();
-            return average != null ? Math.Round((double)average.Age) : 0;
+            if (average != null)
+            {
+                if (average.Age != null)
+                    averageAge = Math.Round((double)average.Age);
+            }
+            return averageAge;
         }
 
         private static int GetCurrentAge(Clothing clothing)
