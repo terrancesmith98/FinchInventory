@@ -21,6 +21,8 @@ namespace Finch_Inventory.Controllers
         // GET: Clothing
         public async Task<ActionResult> Index()
         {
+            db.Dispose();
+            db = new FinchDbContext();
             var clothing = db.Clothings.Include(c => c.Location).Include(c => c.Position).Include(c => c.Status).Include(c => c.Type);
             ViewBag.Machines = db.Machines.ToList();
 
@@ -123,7 +125,13 @@ namespace Finch_Inventory.Controllers
                         clothing.LocationID = newLocID;
                     }
                 }
-
+                if (clothing.Date_Placed_On_Mac != null)
+                    clothing.Date_Placed_On_Mac = Convert.ToDateTime(clothing.Date_Placed_On_Mac).Date;
+                if (clothing.Date_Received != null)
+                    clothing.Date_Received = Convert.ToDateTime(clothing.Date_Received).Date;
+                if (clothing.Date_Removed_From_Mac != null)
+                    clothing.Date_Removed_From_Mac = Convert.ToDateTime(clothing.Date_Removed_From_Mac).Date;
+                
 
                 db.Clothings.Add(clothing);
                 await db.SaveChangesAsync();
@@ -153,8 +161,11 @@ namespace Finch_Inventory.Controllers
             ViewBag.LocationID = new SelectList(db.Locations, "ID", "Location1", clothing.LocationID);
             ViewBag.PositionID = new SelectList(db.Positions, "ID", "Position1", clothing.PositionID);
             ViewBag.StatusID = new SelectList(db.Status, "ID", "Status1", clothing.StatusID);
-            ViewBag.TypeID = new SelectList(db.Types, "ID", "Type1", clothing.TypeID);
-            ViewBag.RollTypeID = new SelectList(db.RollTypes, "ID", "Type");
+            List<Type> typesList = db.Types.OrderBy(x => x.Type1).ToList();
+            ViewBag.TypeID = new SelectList(typesList, "ID", "Type1", clothing.TypeID);
+            ViewBag.RollTypeID = new SelectList(db.RollTypes, "ID", "Type", clothing.RollTypeID);
+            List<Manufacturer> manufList = db.Manufacturers.OrderBy(x => x.Name).ToList();
+            ViewBag.ManufacturerID = new SelectList(manufList, "ID", "Name", clothing.ManufacturerID);
             ViewBag.Machines = db.Machines.ToList();
 
             return View(clothing);
@@ -165,18 +176,29 @@ namespace Finch_Inventory.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ID,PM_Number,PositionID,Manufacturer,TypeID,Serial_Number,Date_Received,Date_Placed_On_Mac,Date_Removed_From_Mac,StatusID,LocationID,Comments, RollTypeID, RollWeight, Dimensions, CurrentDia, MinDia, Crown, CoverMaterial, HoleGroovePattern, SpecifiedHardness, MeasuredHardness, SpecifiedRa, MeasuredRa, CoverDate")] Clothing clothing)
+        public async Task<ActionResult> Edit([Bind(Include = "ID,PM_Number,PositionID,Manufacturer, ManufacturerID, TypeID,Serial_Number,Date_Received,Date_Placed_On_Mac,Date_Removed_From_Mac,StatusID,LocationID,Comments, RollTypeID, RollWeight, Dimensions, CurrentDia, MinDia, Crown, CoverMaterial, HoleGroovePattern, SpecifiedHardness, MeasuredHardness, SpecifiedRa, MeasuredRa, CoverDate")] Clothing clothing)
         {
             if (ModelState.IsValid)
             {
+                if (clothing.Date_Placed_On_Mac != null)
+                    clothing.Date_Placed_On_Mac = Convert.ToDateTime(clothing.Date_Placed_On_Mac).Date;
+                if (clothing.Date_Received != null)
+                    clothing.Date_Received = Convert.ToDateTime(clothing.Date_Received).Date;
+                if (clothing.Date_Removed_From_Mac != null)
+                    clothing.Date_Removed_From_Mac = Convert.ToDateTime(clothing.Date_Removed_From_Mac).Date;
                 db.Entry(clothing).State = EntityState.Modified;
                 await db.SaveChangesAsync();
+                db.Dispose();
+                db = new FinchDbContext();
                 return RedirectToAction("Index", "Home");
             }
             ViewBag.LocationID = new SelectList(db.Locations, "ID", "Location1", clothing.LocationID);
             ViewBag.PositionID = new SelectList(db.Positions, "ID", "Position1", clothing.PositionID);
             ViewBag.StatusID = new SelectList(db.Status, "ID", "Status1", clothing.StatusID);
             ViewBag.TypeID = new SelectList(db.Types, "ID", "Type1", clothing.TypeID);
+            ViewBag.RollTypeID = new SelectList(db.RollTypes, "ID", "Type");
+            ViewBag.ManufacturerID = new SelectList(db.Manufacturers, "ID", "Name", clothing.ManufacturerID);
+            ViewBag.Machines = db.Machines.ToList();
 
             return RedirectToAction("Index", "Home");
         }
@@ -188,9 +210,38 @@ namespace Finch_Inventory.Controllers
                 try
                 {
                     var existing = db.Clothings.Find(clothing.ID);
+                    var availables = new List<Clothing>();
                     if (existing != null)
                     {
-                        var availables = db.Clothings.Where(x => x.PositionID == existing.PositionID && x.PM_Number == existing.PM_Number && x.ID != existing.ID).ToList();
+                        //If PM = 1 and position = 1st Press Felt (3) or 2nd Press Felt (4)
+                        if (existing.PM_Number == 1 && (existing.PositionID == 3 || existing.PositionID == 4))
+                        {
+                            var availables1 = db.Clothings.Where(c => c.PositionID == 3 && c.PM_Number == existing.PM_Number).ToList();
+                            var availables2 = db.Clothings.Where(c => c.PositionID == 4 && c.PM_Number == existing.PM_Number).ToList();
+                            availables = availables1.Concat(availables2).ToList();
+                        }
+                        //If PM = 1 and position = 1st Top Dryer Felt (6) or 1st Bottom Dryer Felt (10)
+                        else if (existing.PM_Number == 1 && (existing.PositionID == 6 || existing.PositionID == 10))
+                        {
+                            var availables1 = db.Clothings.Where(c => c.PositionID == 6 && c.PM_Number == existing.PM_Number).ToList();
+                            var availables2 = db.Clothings.Where(c => c.PositionID == 10 && c.PM_Number == existing.PM_Number).ToList();
+                            availables = availables1.Concat(availables2).ToList();
+                        }
+                        //If PM = 2 and position = 1st Press Felt (3) or 2nd Press Felt (4)
+                        else if (existing.PM_Number == 2 && (existing.PositionID == 3 || existing.PositionID == 4))
+                        {
+                            var availables1 = db.Clothings.Where(c => c.PositionID == 3 && c.PM_Number == existing.PM_Number).ToList();
+                            var availables2 = db.Clothings.Where(c => c.PositionID == 4 && c.PM_Number == existing.PM_Number).ToList();
+                            availables = availables1.Concat(availables2).ToList();
+                        }
+                        //If PM = 2 and position = 1st Top Dryer Felt (6) or 1st Bottom Dryer Felt (10)
+                        else if (existing.PM_Number == 2 && (existing.PositionID == 6 || existing.PositionID == 10))
+                        {
+                            var availables1 = db.Clothings.Where(c => c.PositionID == 6 && c.PM_Number == existing.PM_Number).ToList();
+                            var availables2 = db.Clothings.Where(c => c.PositionID == 10 && c.PM_Number == existing.PM_Number).ToList();
+                            availables = availables1.Concat(availables2).ToList();
+                        }
+                        else availables = db.Clothings.Where(x => x.PositionID == existing.PositionID && x.PM_Number == existing.PM_Number && x.ID != existing.ID).ToList();
                         ViewBag.AvailableRolls = availables;
                         ViewBag.Existing = existing;
                     }
@@ -216,12 +267,14 @@ namespace Finch_Inventory.Controllers
                 try
                 {
                     //update Date Removed for roll to be replaced
-                    existing.Date_Removed_From_Mac = date;
+                    existing.Date_Removed_From_Mac = date.Date;
                     //update Status to History for roll to be replaced
                     existing.StatusID = 3;
                     existing.Comments = comments;
-                    replacement.Date_Placed_On_Mac = date;
+                    replacement.Date_Placed_On_Mac = date.Date;
+                    //update Status to On Machine for replacement roll
                     replacement.StatusID = 2;
+                    replacement.PositionID = existing.PositionID;
                     db.SaveChanges();
                 }
                 catch (Exception e)

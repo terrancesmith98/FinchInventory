@@ -73,6 +73,24 @@ nav {
     }
 }
 
+div#typeGroup {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    border-color: white;
+    background: white;
+    color: #046cb5;
+}
+
+div#pmGroup {
+    position: absolute;
+    top: 1em;
+    right: 13em;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
