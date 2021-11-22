@@ -161,9 +161,11 @@ namespace Finch_Inventory.Controllers
             ViewBag.LocationID = new SelectList(db.Locations, "ID", "Location1", clothing.LocationID);
             ViewBag.PositionID = new SelectList(db.Positions, "ID", "Position1", clothing.PositionID);
             ViewBag.StatusID = new SelectList(db.Status, "ID", "Status1", clothing.StatusID);
-            ViewBag.TypeID = new SelectList(db.Types, "ID", "Type1", clothing.TypeID);
-            ViewBag.RollTypeID = new SelectList(db.RollTypes, "ID", "Type");
-            ViewBag.ManufacturerID = new SelectList(db.Manufacturers, "ID", "Name", clothing.ManufacturerID);
+            List<Type> typesList = db.Types.OrderBy(x => x.Type1).ToList();
+            ViewBag.TypeID = new SelectList(typesList, "ID", "Type1", clothing.TypeID);
+            ViewBag.RollTypeID = new SelectList(db.RollTypes, "ID", "Type", clothing.RollTypeID);
+            List<Manufacturer> manufList = db.Manufacturers.OrderBy(x => x.Name).ToList();
+            ViewBag.ManufacturerID = new SelectList(manufList, "ID", "Name", clothing.ManufacturerID);
             ViewBag.Machines = db.Machines.ToList();
 
             return View(clothing);
