@@ -23,7 +23,8 @@ namespace FinchInventory.Controllers
 #endif
 
 #if (DEBUG)
-            var UserEmail = "terry.smith@finchpaper.com";
+            //var UserEmail = "terry.smith@finchpaper.com";
+            var UserEmail = "mike.hammond@finchpaper.com";
 #endif
 
             db.Dispose();

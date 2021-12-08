@@ -104,3 +104,4 @@ C:\projects\FinchInventory\FinchInventory\bin\roslyn\System.Runtime.InteropServi
 C:\projects\FinchInventory\FinchInventory\bin\roslyn\System.Threading.Tasks.Extensions.dll
 C:\projects\FinchInventory\FinchInventory\bin\Newtonsoft.Json.pdb
 C:\projects\FinchInventory\FinchInventory\obj\Debug\FinchInventory.csproj.AssemblyReference.cache
+C:\projects\FinchInventory\FinchInventory\obj\Debug\FinchInventory.csproj.CopyComplete
