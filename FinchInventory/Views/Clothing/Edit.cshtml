@@ -44,7 +44,7 @@
                             <div class="form-row">
                                 @Html.LabelFor(model => model.RollTypeID, "Roll Type", htmlAttributes: new { @class = "control-label col-md-4 text-right" })
                                 <div class="col-md-8">
-                                    @Html.DropDownList("RollTypeID", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.DropDownList("RollTypeID", null, !ViewBag.UserRoles.Contains(4) ? (object)new { disabled = "disabled" } : new { })
                                     @Html.ValidationMessageFor(model => model.RollTypeID, "", new { @class = "text-danger" })
                                 </div>
                             </div>

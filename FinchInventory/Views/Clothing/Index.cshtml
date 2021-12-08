@@ -85,7 +85,14 @@
                 @Html.DisplayFor(modelItem => item.Comments)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @{
+                    if (ViewBag.UserRoles.Contains(3) || ViewBag.UserRoles.Contains(4))
+                    {
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                    }
+                }
+                |
+
                 @Html.ActionLink("Details", "Details", new { id = item.ID }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.ID })
             </td>
